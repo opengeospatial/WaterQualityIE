@@ -1,0 +1,38 @@
+[[Resources]]
+
+==	Resources
+
+The following resources will be available.
+
+.Resources
+[cols="20e,80d",width="90%",options="header",align="center"]
+|===
+| Item | Description
+
+| _Web Resources_
+| OGC will provide a project workspace on the OGC Portal and GitHub or GitLab.
+
+| _Staffing_
+| Each initiating and participating organization will provide adequate staff resources to support their defined responsibilities for the duration of the IE.
+
+| _Hardware_
+| Initiating organizations will provide hardware as needed to support the IE.
+
+| _Software_
+| Initiating organizations will provide software as needed to support the IE.
+
+| _Other Resources_
+| Participants in the IE are self-funded. All expenses incurred in carrying out the IE will be assumed by the participating agencies within their regular line-of-business.
+|===
+
+=== Requirements for Participation
+In order to become a participant in this IE, an organization must be willing make a resource commitment and a substantial contribution in one or more of the following areas:
+* An OGC web service component for water quality data; AND
+* A web client that makes use of service components, OR
+* Testing of the services/clients, OR
+* Provision of observation data, OR
+* Compilation of documentation into one or more of the Interoperability Experiment deliverables (note that all participants must also provide sub-reports for inclusion in the final reports).
+
+=== Intellectual property
+
+Intellectual property (IP) brought to the IE will remain with the participants. IP related to advancement of specific agency information systems will also remain with the participants. IP related to the development or advancement of OGC standards (e.g., WaterML 2.0) will rest with the Hydrology DWG and its joint authorities: the OGC and WMO. Any remaining IP that results from the IE will be jointly owned by all participants. The participants agree to respect the collaborative nature of the experiment with due acknowledgement of the participants and, if appropriate, undertake co-authorship in any ensuing materials.

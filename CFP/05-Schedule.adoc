@@ -1,0 +1,42 @@
+[[Schedule]]
+
+==	Schedule (Tentative)
+
+.Master Schedule
+[cols="20e,60d,20d",width="90%",options="header",align="center"]
+|===
+| Milestone | Event |Date
+
+.2+| *Startup*
+| OGC Architecture Board approval of Activity Plan
+| April 2022
+
+| Press Release / Call for Participants
+| June 2022
+
+.7+| *Execution*
+| Planned kickoff date (execution start date)
+| July 2022
+
+| Use Case identification
+| September 2022
+
+| First vocabulary patterns
+| December 2022
+
+| First API Patterns and implementations
+| March 2023
+
+| Iterate on patterns and implementations
+| March 2023 to June 2023
+
+| Change Requests for Standards, revision of Best Practice
+| June 2023
+
+.2+| *Wrap-up and Reporting*
+| Technology Demonstration
+| September 2023
+
+| Final ER submission
+| December 2023
+|===

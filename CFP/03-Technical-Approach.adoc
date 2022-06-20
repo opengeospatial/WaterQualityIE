@@ -1,0 +1,51 @@
+[[TechnicalApproach]]
+
+== Technical Approach
+
+The Technical Approach for this Interoperability Experiment focuses on leveraging existing OGC Standards (see the above mentioned ‘OGC Baseline’) and, as needed, developing Change Requests for those Standards. The following section describes the Technical Approach in detail.
+
+=== Experiments
+
+The IE participants will attempt to address the following experiments, which are centered on each of the aforementioned use cases.
+* Experiment A: OGC semantic baseline: Compatibility and utility of existing models/ formats. Is a best practice possible? If not, how much needs to change (extension, profiling) to achieve interoperability?
+* Experiment B: OGC API baseline: Which API (pattern) to serve what? How much change (extension, profiling) is needed to achieve interoperability?
+* Experiment C: Bridging the gap with research activities (e.g., I-ADOPT). Targeting a fine grain description of observable properties and observing procedure.
+
+=== Experimental Methodology
+
+Participants in this IE will enlist technology and domain experts from this team as required. Attention will be paid towards encoding and delivery of water quality data and metadata and integration with common WQ taxonomies/ontologies.
+
+Participants will meet at scheduled OGC meetings or other venues, once or twice a year as required, and will otherwise carry out business electronically via email, teleconferencing, and web conferencing.
+
+The IE will kick off with an in-depth analysis of existing use cases and the data exchange arrangements that are currently in use. This harmonization and exploration phase will inform a shared vision of the problem space and what potential solutions may be worth pursuing. Technical experiments will be designed based on the outcomes of this first phase.
+
+Technical experiments will take the form of thought experiments, design workshops, and exploratory model/software development for the sake of evaluation. They will aim to check assumptions and vet approaches such that, at the end of the IE, the activities demonstrate the utility or failings of investigated approaches.
+
+=== Demonstration Planning
+
+Demonstrations are planned during OGC Hydro Domain Working Group (DWG) meetings to demonstrate progress. Each demonstration will illustrate more functionality, with the final demonstration showing complete functionality necessary to support the use cases of the IE.
+
+=== Standards  Development
+
+The primary focus of this IE will be on reusing as much as possible the OGC Standards Baseline. However, if the need arises, the IE will consider the development and testing of evolutions of the Standards (semantics and technical). Such activity will be duly documented in the Engineering Report and reported back to the relevant OGC Standards Working Groups (SWGs) via the appropriate Change Request.
+
+Depending on the result of the experimentation, the IE may also lead to an OGC Best Practice (the form of which is yet to be determined as the pre-existing WaterML-WQ BestPractice will be considered in the IE).
+
+=== Component Development
+
+The following components will be developed concurrently by the responsible organization(s), to be completed by the execution end date:
+* A lightweight semantic pattern to exchange Surface water quality data exchange;
+* A lightweight semantic pattern to exchange Ground water quality data exchange;
+* A comprehensive semantic pattern to exchange Surface water quality data exchange;
+* A comprehensive semantic pattern to exchange Ground water quality data exchange;
+* Water Quality data serialization (e.g., OMS JSON);
+* Water Quality data serializations and OGC APIs (OGC API - Features / SensorThings API); and
+* Water quality vocabularies/taxonomies.
+
+Other related services/clients that will be possibly covered during the IE:
+* Evolutions of OGC API - Features implementation / evolution of OGC SensorThings API Part 1 implementation; and
+* Desktop clients (e.g., evolution of QGIS GMLAS Toolbox).
+
+=== Testing and Integration
+
+Testing and integration will largely involve implementation of the use case(s). At least two testing and integration sessions will be proposed, once at the beginning of the testing and integration period and once directly prior to the demonstration. Others may occur as required. Hydro DWG members will do their best to engage the research community via the RDA Global Water Information Interest Group (GWIIG).

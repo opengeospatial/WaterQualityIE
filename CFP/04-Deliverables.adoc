@@ -1,0 +1,19 @@
+[[Deliverables]]
+
+==	Deliverables
+
+The items listed below will be considered the deliverables for the project.
+
+=== Documentation
+
+The following documentation will comprise the deliverables for the project:
+* Water Quality IE engineering report:
+** Vetting OGC Baseline for water quality data use cases;
+** Suggesting an update to the WaterML2 Best Practice for Water Quality;
+** Setting the stage for a water quality data exchange standard;
+** Suggesting a common set of water quality variables and practices to semanticize and align them with pre-existing ones; how to express data quality in metadata;
+** The role of COG in OGC standards; and
+* Change Requests, as needed, for OGC Specifications (e.g., WaterML-WQ, etc.).
+
+=== Demonstration
+A live virtual demonstration of all functioning components will be made towards the end of the IE.

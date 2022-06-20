@@ -1,0 +1,35 @@
+[[MainBody]]
+== Introduction
+
+The Open Geospatial Consortium (OGC) is releasing this *_Call for Participation_* (CFP) to solicit proposals for the *_OGC Water Quality Interoperability Experiment (WQ IE)*. This IE will advance the development of the WaterML 2.0 suite of standards in the area of water quality data. The WQ IE will test interoperability and interconnection of existing Water Quality Data Systems. The participants will identify how to support WaterML 2.0 development in the domain of Water Quality (WQ). This includes enhancement of WQ related taxonomies/ontologies and API identification and usage, with the ultimate goal of both the OGC OGC and the World Meteorological Organization (WMO) endorsement of an international standard and/or best practice for Water Quality data exchange.
+
+The interoperability experiment will be framed by high-level water quality data use cases. For example, data exchange between local jurisdictions and regional or national environmental agencies is a motivating use case. Specific use cases, such as representation of sampled media or measured constituents, are critical to the success of the IE and will be defined as part of the IE.
+
+=== OGC Innovation Program Initiative
+
+This initiative is being conducted under the http://www.opengeospatial.org/ogc/programs/ip[OGC Innovation Program]. This program provides a collaborative agile process for solving geospatial challenges. Organizations (sponsors and technology implementers) come together to solve problems, produce prototypes, develop demonstrations, provide best practices, and advance the future of standards. Since 1999 more than 100 initiatives have taken place.
+
+IEs are generally structured to support or extend the standardization work in the OGC and thus the IE participants will coordinate closely with the appropriate OGC Technical Committee Working Groups, such as the Geoscience DWG mentioned above.
+
+=== Contact
+
+Answers to this Call are collected with the https://www.ogc.org/ogc/innovation[OGC Innovation Program contact form]. Alternatively they can be sent to innovation@ogc.org.
+
+==	Participants and observer organizations
+
+This IE will be open to the general public. Participants will be required to make a resource commitment. Technical experts from non-OGC organizations may be Participants in the IE. Other individuals from non-OGC organizations will be allowed in the IE as Observers. Any OGC member may register as an Observer.
+
+Participants and Observers will join the founding organizations of the IE. Founding organizations are:
+
+* Bureau de Recherches Géologiques et Minières (BRGM), France
+* Centro de Investigación Ecológica y Aplicaciones Forestales (CREAF), Spain
+* Federation University Australia, Australia
+* Pole INSIDE - Environmental information systems research center, France
+* United Nations Environmental Programme (UNEP) Global Environment Monitoring System for freshwater (GEMS/Water) Data Centre, Germany
+* United States Geological Survey (USGS)
+* University of Tartu, Estonia
+* World Meteorological Organization (WMO) HydroHub
+
+=== Observer caveats
+
+Official IE Observers will be granted access to the IE project on the OGC Portal. Observer status allows the member or non-member to monitor progress of the given IE, have access to the IE e-mail reflector, access documents as they are posted to the IE folder on the portal, contribute software and/or data to the effort, and so forth. Observer status does not allow the Member or non-member to attend the IE Kickoff meeting, formally comment on documents, or otherwise disrupt the execution of the IE. Interoperability Engineering Reports from the IE will be made available to all OGC members at the end of the IE for review and comment.

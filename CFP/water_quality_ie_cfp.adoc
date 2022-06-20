@@ -1,0 +1,46 @@
+
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: macro
+:toclevels: 2
+:numbered:
+:sectanchors:
+:source-highlighter: coderay
+// :title-logo-image: image::images/UAS_IE.jpg[top=5%, align=right, pdfwidth=6.5in]
+// set media to output format print or screen for pdf export
+:media: screen
+
+// variables used throughout the document
+:initiativeName: OGC Water Quality Interoperability Experiment
+:pointOfContact: innovation@ogc.org
+
+
+////
+PDF: asciidoctor-pdf water_quality_ie_cfp.adoc -o 2022_OGC_Water_Quality_cfp.pdf
+
+HTML: asciidoctor -a data-uri -a stylesheet=rocket-panda.css -a stylesdir=./../../../templates/resources/stylesheets water_quality_ie_cfp.adoc -o 2022_OGC_Water_Quality_cfp.html
+////
+
+= {initiativeName}: Call for Participation (CFP)
+Version 1.0 - 2 June 2022
+
+<<<<
+
+toc::[]
+
+<<<<
+
+include::01-MainBody.adoc[]
+
+include::02-Scope.adoc[]
+
+include::03-Technical-Approach.adoc[]
+
+include::04-Deliverables.adoc[]
+
+include::05-Schedule.adoc[]
+
+include::06-Resources.adoc[]
+
+// include::07-References.adoc[]
