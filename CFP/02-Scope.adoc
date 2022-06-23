@@ -40,6 +40,7 @@ The following initiatives for the basis for the Organizational use cases to be c
 * Water Quality Data Portal Unified Data Output Format
 * International Water Quality Data Sharing in the EU
 * French national legacy Water Quality system data exposed to research organizations
+* Interoperability between continuous/sensor data and discrete/sample data
 
 The above high-level Organizational use cases will provide overall framing for the IE, but ultimately, the experiment will address specific water quality domain use cases. The specific definition of these domain use cases will be determined as an initial component of the experiment. Potential Water Quality Domain Use Cases include:
 * Surface water chemistry: mainly water samples and chem concentration;
