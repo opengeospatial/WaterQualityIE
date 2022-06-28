@@ -12,14 +12,14 @@
 | April 2022
 
 | Press Release / Call for Participants
-| June 2022
-
-.7+| *Execution*
-| Planned kickoff date (execution start date)
 | July 2022
 
-| Use Case identification
+.6+| *Execution*
+| Planned kickoff date (execution start date)
 | September 2022
+
+| Use Case identification
+| October 2022
 
 | First vocabulary patterns
 | December 2022

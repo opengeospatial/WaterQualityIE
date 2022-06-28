@@ -27,6 +27,7 @@ The following resources will be available.
 
 === Requirements for Participation
 In order to become a participant in this IE, an organization must be willing make a resource commitment and a substantial contribution in one or more of the following areas:
+
 * An OGC web service component for water quality data; AND
 * A web client that makes use of service components, OR
 * Testing of the services/clients, OR

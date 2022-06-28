@@ -7,6 +7,7 @@ The Technical Approach for this Interoperability Experiment focuses on leveragin
 === Experiments
 
 The IE participants will attempt to address the following experiments, which are centered on each of the aforementioned use cases.
+
 * Experiment A: OGC semantic baseline: Compatibility and utility of existing models/ formats. Is a best practice possible? If not, how much needs to change (extension, profiling) to achieve interoperability?
 * Experiment B: OGC API baseline: Which API (pattern) to serve what? How much change (extension, profiling) is needed to achieve interoperability?
 * Experiment C: Bridging the gap with research activities (e.g., I-ADOPT). Targeting a fine grain description of observable properties and observing procedure.
@@ -34,6 +35,7 @@ Depending on the result of the experimentation, the IE may also lead to an OGC B
 === Component Development
 
 The following components will be developed concurrently by the responsible organization(s), to be completed by the execution end date:
+
 * A lightweight semantic pattern to exchange Surface water quality data exchange;
 * A lightweight semantic pattern to exchange Ground water quality data exchange;
 * A comprehensive semantic pattern to exchange Surface water quality data exchange;
@@ -43,6 +45,7 @@ The following components will be developed concurrently by the responsible organ
 * Water quality vocabularies/taxonomies.
 
 Other related services/clients that will be possibly covered during the IE:
+
 * Evolutions of OGC API - Features implementation / evolution of OGC SensorThings API Part 1 implementation; and
 * Desktop clients (e.g., evolution of QGIS GMLAS Toolbox).
 

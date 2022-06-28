@@ -24,6 +24,7 @@ Participants and Observers will join the founding organizations of the IE. Found
 * Bureau de Recherches Géologiques et Minières (BRGM), France
 * Centro de Investigación Ecológica y Aplicaciones Forestales (CREAF), Spain
 * Federation University Australia, Australia
+* Internet of Water Coalition, USA
 * Pole INSIDE - Environmental information systems research center, France
 * United Nations Environmental Programme (UNEP) Global Environment Monitoring System for freshwater (GEMS/Water) Data Centre, Germany
 * United States Geological Survey (USGS)

@@ -7,6 +7,7 @@ The items listed below will be considered the deliverables for the project.
 === Documentation
 
 The following documentation will comprise the deliverables for the project:
+
 * Water Quality IE engineering report:
 ** Vetting OGC Baseline for water quality data use cases;
 ** Suggesting an update to the WaterML2 Best Practice for Water Quality;
