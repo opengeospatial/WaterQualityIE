@@ -39,10 +39,11 @@ The objectives of this IE include the following.
 The following initiatives for the basis for the Organizational use cases to be considered in the IE.
 
 * WMO Hydrologic Observing System Data Sharing Globally
-* US Water Quality Data Exchange & “Internet of Water” in the US
+* US Water Quality Data Exchange & “Internet of Water” 
 * Water Quality Data Portal Unified Data Output Format
 * International Water Quality Data Sharing in the EU
 * French national legacy Water Quality system data exposed to research organizations
+* US EPA interoperability between continuous/sensor data and discrete/sample data
 
 The above high-level Organizational use cases will provide overall framing for the IE, but ultimately, the experiment will address specific water quality domain use cases. The specific definition of these domain use cases will be determined as an initial component of the experiment. Potential Water Quality Domain Use Cases include:
 
