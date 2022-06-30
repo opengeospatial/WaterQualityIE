@@ -11,6 +11,7 @@ Furthermore, sharing of water quality data globally and nationally is currently 
 Establishment of international standards for water quality data is a key activity towards enhancing the availability of water quality information at the global level and increasing the effectiveness of development activities.
 
 The IE will build on:
+
 * The experience gained and data assets available from existing systems;
 * The OGC Standards Baseline:
 ** semantics: WaterML2.0 suite of standards, Observations, Measurements and Samples (OMS),
@@ -26,22 +27,26 @@ The interoperability experiment will deliver an Engineering Report (ER) outlinin
 === Objectives
 
 The objectives of this IE include the following.
-(1)	Extend and complement existing work of the HDWG, with the goal of advancing the development of WaterML 2.0 suite of standards to the sub domain of water quality observations.
-(2)	Develop a shared understanding of the dimensions of interoperability required for prominent use cases involving water quality data for both surface and ground waters.
-(3)	Design and test data interchange mechanisms and vocabularies that achieves the needs of stakeholder organizations and systems.
-(4)	Complete an ER in the form of either a Best Practice or Standard  depending on IE outcomes.
-(5)	Increase interoperability between in-situ and remote sensing data about water quality.
+
+1.	Extend and complement existing work of the HDWG, with the goal of advancing the development of WaterML 2.0 suite of standards to the sub domain of water quality observations.
+2.	Develop a shared understanding of the dimensions of interoperability required for prominent use cases involving water quality data for both surface and ground waters.
+3.	Design and test data interchange mechanisms and vocabularies that achieves the needs of stakeholder organizations and systems.
+4.	Complete an ER in the form of either a Best Practice or Standard  depending on IE outcomes.
+5.	Increase interoperability between in-situ and remote sensing data about water quality.
 
 === Organizational Use Cases
 
 The following initiatives for the basis for the Organizational use cases to be considered in the IE.
+
 * WMO Hydrologic Observing System Data Sharing Globally
-* US Water Quality Data Exchange & “Internet of Water” in the US
+* US Water Quality Data Exchange & “Internet of Water” 
 * Water Quality Data Portal Unified Data Output Format
 * International Water Quality Data Sharing in the EU
 * French national legacy Water Quality system data exposed to research organizations
+* US EPA interoperability between continuous/sensor data and discrete/sample data
 
 The above high-level Organizational use cases will provide overall framing for the IE, but ultimately, the experiment will address specific water quality domain use cases. The specific definition of these domain use cases will be determined as an initial component of the experiment. Potential Water Quality Domain Use Cases include:
+
 * Surface water chemistry: mainly water samples and chem concentration;
 * Surface water hydrobiology, microbiology: taxa occurrence, indices calculation;
 * Surface water hydromorphology: category observation (shape/type of bank, flow ‘morphology’, etc.);
