@@ -23,6 +23,7 @@ Participants and Observers will join the founding organizations of the IE. Found
 
 * Bureau de Recherches Géologiques et Minières (BRGM), France
 * Centro de Investigación Ecológica y Aplicaciones Forestales (CREAF), Spain
+* Center for Geospatial Solutions, Lincoln Institute of Land Policy (CGS), USA
 * Federation University Australia, Australia
 * Center for Geospatial Solutions, Lincoln Institute of Land Policy (CGS), USA
 * Pole INSIDE - Environmental information systems research center, France
