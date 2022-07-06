@@ -42,7 +42,7 @@ The following components will be developed concurrently by the responsible organ
 * A comprehensive semantic pattern to exchange Ground water quality data exchange;
 * Water Quality data serialization (e.g., OMS JSON);
 * Water Quality data serializations and OGC APIs (OGC API - Features / SensorThings API); and
-* Water quality vocabularies/taxonomies.
+* Water quality vocabularies/taxonomies (e.g linked to I-ADOPT)
 
 Other related services/clients that will be possibly covered during the IE:
 

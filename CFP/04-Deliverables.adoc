@@ -14,7 +14,7 @@ The following documentation will comprise the deliverables for the project:
 ** Setting the stage for a water quality data exchange standard;
 ** Suggesting a common set of water quality variables and practices to semanticize and align them with pre-existing ones; how to express data quality in metadata;
 ** The role of COG in OGC standards; and
-* Change Requests, as needed, for OGC Specifications (e.g., WaterML-WQ, etc.).
+* Change Requests, as needed, for OGC Specifications (e.g., Observations, Measurements & Samples JSON encoding, WaterML-WQ, etc.).
 
 === Demonstration
 A live virtual demonstration of all functioning components will be made towards the end of the IE.
