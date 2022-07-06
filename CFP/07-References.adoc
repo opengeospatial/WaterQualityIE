@@ -1,3 +1,21 @@
 [[References]]
 
 ==	References
+
+
+* OGC 10-126r4: OGC® WaterML 2.0: Part 1- Timeseries
+* OGC 15-018r2: OGC® WaterML2.0: Part 2 - Ratings, Gaugings and Sections
+* OGC 14-111r6: OGC® WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model
+* OGC 16-032r2: OGC WaterML 2: Part 4 – GroundWaterML 2 (GWML2)
+* OGC 14-003: WaterML-WQ – an O&M and WaterML 2.0 profile for water quality data (1.0)
+* OGC 10-004r3: Observations & Measurements (and its on-going revision)
+* OGC 10-025r1: Observations and Measurements - XML Implementation
+* OGC 18-088: SensorThings API Part 1: Sensing Version 1.1
+* OGC 17-069r4: OGC API - Features - Part 1: Core corrigendum
+* OGC 19-086r4: OGC API - Environmental Data Retrieval
+* "Evaluation of Application Programming Interfaces for INSPIRE" : https://op.europa.eu/en/publication-detail/-/publication/5ea37e1b-b565-11ec-b6f4-01aa75ed71a1/language-en
+* "A Harmonized Vocabulary For Water Quality": https://doi.org/10.13140/RG.2.1.2490.4404
+* W3C Data on the Web Best Practices : https://www.w3.org/TR/dwbp/
+* W3C Spatial Data on the Web Best Practices : https://www.w3.org/TR/sdw-bp/
+* W3C SSN/SOSA : https://www.w3.org/TR/vocab-ssn/
+* RDA InteroperAble Descriptions of Observable Property Terminology WG (I-ADOPT WG) : https://www.rd-alliance.org/groups/interoperable-descriptions-observable-property-terminology-wg-i-adopt-wg
