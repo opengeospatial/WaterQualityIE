@@ -23,7 +23,7 @@ HTML: asciidoctor -a data-uri -a stylesheet=rocket-panda.css -a stylesdir=./../.
 ////
 
 = {initiativeName}: Call for Participation (CFP)
-Version 1.1 - 28 June 2022
+Version 1.1 - 8 July 2022
 
 <<<<
 
