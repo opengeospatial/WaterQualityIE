@@ -1,0 +1,1 @@
+Folder to contain an adoc version of the Activity Plan that is, for the time being available here <https://docs.google.com/document/d/1t0EJQid9AUFtZ4yIGK4IQ7W2SLs9VZRg/edit#heading=h.gjdgxs>
