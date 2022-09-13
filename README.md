@@ -14,6 +14,7 @@ The kick-off is
 - the living meeting minutes document is available here : https://docs.google.com/document/d/1x9VigCyJRr2uuox6gwCPwOy4v2yxG0VLFSsytsv4pLI/edit#heading=h.a3aj1aoqt9m8 
 - connexion details are in the living meeting minutes document
 - add yourself to the WQ IE mailing list (soon to be available)
+- slides presented are available in the <https://github.com/opengeospatial/WaterQualityIE/tree/master/relevant_material> folder
 
 
 ## Contributing to the GitHub repository
