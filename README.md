@@ -4,16 +4,18 @@
 
 The [WaterQualityIE](https://github.com/opengeospatial/WaterQualityIE) repo contains resources associated with the OGC Water Quality Interoperability Experiment (IE). More information on this IE can be found at the [OGC Water Quality IE initiative page](https://www.ogc.org/projects/initiatives/waterqualityie).
 
-## Kick-off
+## Recurring meeting
 
-The kick-off is 
-- planned on next Tuesday Sep 13th 9:00 AM EDT / 15:00 Paris Time Zone ([time zone planner link](https://www.timeanddate.com/worldclock/fixedtime.html?month=09&day=13&year=2022&hour=09&min=00&sec=0&p1=179&sort=0)),
-- accessible at the following link :     https://www4.gotomeeting.com/join/661994117
+- every Tuesday at 8:00 AM EDT / 14:00 Paris Time Zone ([time zone planner link](https://www.timeanddate.com/worldclock/fixedtime.html?iso=20220920T08&p1=179))
+- connexion details to webconference are in the living meeting minutes document (see below) as connexion URL may change for now (we are working on it)
+
 
 ## Participate
 - the living meeting minutes document is available here : https://docs.google.com/document/d/1x9VigCyJRr2uuox6gwCPwOy4v2yxG0VLFSsytsv4pLI/edit#heading=h.a3aj1aoqt9m8 
-- connexion details are in the living meeting minutes document
-- add yourself to the WQ IE mailing list (soon to be available)
+
+- add yourself to the WQ IE mailing list (<water-quality-ie@lists.ogc.org>)
+    - For non-members -> https://portal.ogc.org/files/102246
+    - OGC member can add themselve like every other OGC Group
 - slides presented are available in the <https://github.com/opengeospatial/WaterQualityIE/tree/master/relevant_material> folder
 
 
