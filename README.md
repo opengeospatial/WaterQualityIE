@@ -7,6 +7,7 @@ The [WaterQualityIE](https://github.com/opengeospatial/WaterQualityIE) repo cont
 ## Recurring meeting
 
 - every Tuesday at 8:00 AM EDT / 14:00 Paris Time Zone ([time zone planner link](https://www.timeanddate.com/worldclock/fixedtime.html?iso=20220920T08&p1=179))
+    - /!\ planned exception :  Tuesday 1st of November meeting is moved to Wed 2nd/11 same time slot (OGC Calendar is up to date) /!\ 
 - https://meet.goto.com/ogc-wqie 
 
 
