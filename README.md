@@ -12,6 +12,7 @@ The [WaterQualityIE](https://github.com/opengeospatial/WaterQualityIE) repo cont
 
 
 ## Participate
+- joining the group -> info@ogc.org
 - the living meeting minutes document is available here : https://docs.google.com/document/d/1x9VigCyJRr2uuox6gwCPwOy4v2yxG0VLFSsytsv4pLI/edit#heading=h.a3aj1aoqt9m8 
 
 - add yourself to the WQ IE mailing list (<water-quality-ie@lists.ogc.org>)
