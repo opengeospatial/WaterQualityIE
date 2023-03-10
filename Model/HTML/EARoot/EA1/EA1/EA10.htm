@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>InSitu_QualityObservation_Collection</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> InSitu_QualityObservation_Collection </h1>
+			<!-- <img class="header_image" src="../../../images/ea-banner.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/ea-banner.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA1.htm">WaterQuality_IE</a> / <a href="../EA3.htm">WaterQuality_Instance</a> / <a href="EA12.htm">InSitu_QualityObservation</a> / <a href="EA10.htm">InSitu_QualityObservation_Collection</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/177.png" alt="Diagram"/> <a href="EA8.htm">InSitu_QualityObservation</a></li>
+<li><img src="../../../images/177.png" alt="Diagram"/> <a href="EA10.htm">InSitu_QualityObservation_Collection</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA22.htm">	Temperature measurement in surface water: ObservingProcedure</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA13.htm">EnvironmentalMonitoringActivity: EnvironmentalMonitoringActivity</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA14.htm">In-Result</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA23.htm">InSituObsA: Observation</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA24.htm">InSituTempObsA: Observation</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA25.htm">InSituTempObsB: Observation</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA26.htm">ObsCap1: ObservingCapability</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA15.htm">OtherSensor: Observer</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA16.htm">OtherSensorDeployment: Deployment</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA17.htm">TempResultA</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA27.htm">TempResultB</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA18.htm">WaterQualityStation: Host</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA28.htm">WaterTemperature: ObservableProperty</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA19.htm">WaterTemperatureDeployment: Deployment</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA29.htm">WaterTemperatureSensor: Observer</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA20.htm">WaterTempTimeSeries: ObservationCollection</a></li>
+<li><img src="../../../images/25.png" alt="Object"/> <a href="EA21.htm">WaterTempTS_Characteristics</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class=diagram_image> 
+<img src="EA11.png" usemap="#EA11" border="0" />
+
+<MAP NAME="EA11">
+<area shape="rect" coords="609,10,699,60" href="../EA4/EA74.htm" target="_self">
+<area shape="rect" coords="1670,874,1760,924" href="EA27.htm" target="_self">
+<area shape="rect" coords="1419,671,1722,861" href="EA25.htm" target="_self">
+<area shape="rect" coords="1143,32,1272,82" href="EA21.htm" target="_self">
+<area shape="rect" coords="1515,65,1847,149" href="EA20.htm" target="_self">
+<area shape="rect" coords="1398,463,1488,513" href="EA17.htm" target="_self">
+<area shape="rect" coords="1057,1049,1184,1127" href="EA15.htm" target="_self">
+<area shape="rect" coords="743,899,970,1027" href="EA16.htm" target="_self">
+<area shape="rect" coords="10,643,372,806" href="EA13.htm" target="_self">
+<area shape="rect" coords="521,513,788,641" href="EA19.htm" target="_self">
+<area shape="rect" coords="20,228,245,379" href="EA26.htm" target="_self">
+<area shape="rect" coords="523,228,787,327" href="EA28.htm" target="_self">
+<area shape="rect" coords="511,102,799,201" href="EA22.htm" target="_self">
+<area shape="rect" coords="578,700,731,806" href="EA18.htm" target="_self">
+<area shape="rect" coords="567,359,743,472" href="EA29.htm" target="_self">
+<area shape="rect" coords="1204,217,1591,429" href="EA24.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">InSitu_QualityObservation_Collection : Object diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">28/02/2023 00:00:00</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">07/03/2023 14:11:51</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" /></button>Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">grellets</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" /></button>Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{209EFFF2-DEB0-4688-B5EE-746E47E2054C}</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+
