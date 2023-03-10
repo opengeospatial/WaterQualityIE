@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>OtherSensor: Observer</title>
+<title>OtherSensorDeployment: Deployment</title>
 <link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
 <script>
@@ -64,12 +64,12 @@
 <div class="section group" >
 
 		<div class="col span_2_of_2 header_frame">
-			<h1> OtherSensor: Observer </h1>
+			<h1> OtherSensorDeployment: Deployment </h1>
 			<!-- <img class="header_image" src="../../../images/ea-banner.png" align="right" alt="Header Image" />-->
 			<img class="header_image" src="../../../images/ea-banner.png" align="right" alt="Header Image" />
 		</div>
 		<div class="col span_2_of_2 breadcrumb_frame">
-			<p><a href="../../EA1.htm">WaterQuality_IE</a> / <a href="../EA3.htm">WaterQuality_Instance</a> / <a href="EA11.htm">InSitu_Observation</a> / <a href="EA16.htm">OtherSensor: Observer</a></p>
+			<p><a href="../../EA1.htm">WaterQuality_IE</a> / <a href="../EA3.htm">WaterQuality_Instance</a> / <a href="EA12.htm">InSitu_QualityObservation</a> / <a href="EA16.htm">OtherSensorDeployment: Deployment</a></p>
 		</div>
 			
 		<table class="contentmaintable">
@@ -84,12 +84,12 @@
 					<td class="indexcell">
 						<div class="projectBrowserTitle">Project: </div>
 						<ul>
-<a href="EA11.htm">InSitu_Observation</a></ul>
+<a href="EA12.htm">InSitu_QualityObservation</a></ul>
 
 					</td>
 					<td class="contentcell"><div class="pageHeader"></div>
 <div class="PageBody">
-	<span class="ObjectTitle">OtherSensor  : Public   Object instance</span>
+	<span class="ObjectTitle">OtherSensorDeployment  : Public   Object instance</span>
 	<table border="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
@@ -97,7 +97,7 @@
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">07/02/2023 16:18:22</td>
+			<td class="ObjectDetailsValue">07/02/2023 16:18:35</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -142,19 +142,20 @@
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{F891F5F8-E81D-4803-9C65-12CCD445736D}</td>
+			<td class="ObjectDetailsValue">{E8C47F7F-A0C9-4fd2-A7CE-C0FA364286E6}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
-			<td class="ObjectDetailsValue"><a href="EA9.htm">InSitu_Observation_Collection</a></td>
+			<td class="ObjectDetailsValue"><a href="EA8.htm">InSitu_QualityObservation</a>, <a href="EA10.htm">InSitu_QualityObservation_Collection</a></td>
 		</tr>
 	</table>
 	
 	<div class="TableGroup" id="TableGroup">
 		<ul class="ItemTitle">
+			<li onClick="toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 			<li onClick="toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
 		</ul>
-		<div class="ItemBody" id="AssociationsFromTable">
+		<div class="ItemBody" id="AssociationsToTable">
 			<table class="Table ea_table">
 				<tr>
 					<td width="40%" class="TableHeading">Element</td>
@@ -163,7 +164,7 @@
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA18.htm">OtherSensorDeployment: Deployment</a><br />
+						<a href="EA15.htm">OtherSensor: Observer</a><br />
 						Object &nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
@@ -179,6 +180,62 @@
 					<td class="TableRowBottomDashed"  colspan="3">
 						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink4" /></button>Details:
 							<div id="detailsDIVLink4" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA18.htm">WaterQualityStation: Host</a><br />
+						Object &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink5" /></button>Details:
+							<div id="detailsDIVLink5" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA4/EA68.htm">Station Orléans [Pont Royal] (Loire): Host</a><br />
+						Object &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink6" /></button>Details:
+							<div id="detailsDIVLink6" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
