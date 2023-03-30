@@ -1,4 +1,4 @@
-# WebAccess (ReadOnly)
+# WebAccess (HTML View)
 
 0. http://umltool.ogc.org/login.php
 1. Tick  « Combined IEs 2023 Model (Read-Only) » and choose Desktop (if you’re on a laptop)
