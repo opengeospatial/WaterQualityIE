@@ -5,6 +5,7 @@
 ### Ex Situ Quality
 
 [![Ex Situ Quality](https://github.com/opengeospatial/WaterQualityIE/assets/11915304/e04cd5be-bcd2-45d9-a7a4-ee20bd19eda6)](https://umltool.ogc.org/index.php?m=7&o=F583195F-0C18-4e93-9BA2-6CEFCCDC9C77)
+Ex Situ Quality
 
 ### In Situ Quality 
 
