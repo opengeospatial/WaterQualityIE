@@ -9,15 +9,17 @@ Under the WQ IE UML Model, you will find 3 folders:
 - Physical Model
 - WaterQuality_Instance
 
-For an overview of these individual folders and their contents, please see the [Package Overview Diagram](https://umltool.ogc.org/index.php?m=7&o=BDD2204B-5E02-44b5-8F54-10A230C2491F).
+For an overview of these individual folders and their contents, please see the [Package Overview Diagram](https://umltool.ogc.org/index.php?m=7&o=BDD2204B-5E02-44b5-8F54-10A230C2491F) as well as the sections below.
 
 ## Logical Model
 The [logical model](https://github.com/opengeospatial/WaterQualityIE/blob/master/Model/Logical%20Model.md) is based on OMS with minor additions.
 
 ## Physical Model
-
+The physical model is based on a draft version of the STA 2.0 model currently being created.
 
 ## WaterQuality_Instance
+During the requirements collection phase, strong use was made of UML Object Diagrams following the OMS standard.
+
 
 # Access to the WQ IE UML Model
 There are various ways to access the WQ IE UML Model hosted on the OGC SparxCloud:
