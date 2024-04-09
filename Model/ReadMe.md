@@ -12,9 +12,7 @@ Under the WQ IE UML Model, you will find 3 folders:
 For an overview of these individual folders and their contents, please see the [Package Overview Diagram](https://umltool.ogc.org/index.php?m=7&o=BDD2204B-5E02-44b5-8F54-10A230C2491F).
 
 ## Logical Model
-In the logical model, we define an association between WQ_Sampling acts and the relevant WQ_Host objects, that is not foreseen under the OMS Model.
-
-![Logical Model](https://github.com/opengeospatial/WaterQualityIE/assets/11915304/d09e7fe5-1be0-47e2-a87d-335ba07cd86c)
+The [logical model](https://github.com/opengeospatial/WaterQualityIE/blob/master/Model/Logical%20Model.md) is based on OMS with minor additions.
 
 ## Physical Model
 
