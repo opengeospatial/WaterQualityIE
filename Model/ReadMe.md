@@ -17,7 +17,7 @@ For an overview of these individual folders and their contents, please see the [
 The [logical model](https://github.com/opengeospatial/WaterQualityIE/blob/master/Model/Logical%20Model.md) is based on OMS with minor additions.
 
 ## Physical Model
-The physical model is based on a draft version of the STA 2.0 model currently being created.
+The [physical model](https://github.com/opengeospatial/WaterQualityIE/blob/master/Model/Physical%20Model.md) is based on a draft version of the STA 2.0 model currently being created.
 
 ## WaterQuality_Instance
 During the requirements collection phase, strong use was made of UML Object Diagrams following the OMS standard.
