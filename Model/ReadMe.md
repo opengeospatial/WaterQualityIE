@@ -20,7 +20,7 @@ The [logical model](https://github.com/opengeospatial/WaterQualityIE/blob/master
 The [physical model](https://github.com/opengeospatial/WaterQualityIE/blob/master/Model/Physical%20Model.md) is based on a draft version of the STA 2.0 model currently being created.
 
 ## WaterQuality_Instance
-During the requirements collection phase, strong use was made of UML Object Diagrams following the OMS standard.
+During the requirements collection phase, strong use was made of [UML Object Diagrams](https://github.com/opengeospatial/WaterQualityIE/blob/master/Model/Object%20Diagrams.md) following the OMS standard.
 
 
 # Access to the WQ IE UML Model
