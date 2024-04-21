@@ -1,0 +1,620 @@
+{
+    "requests": [{
+            "id": "GroundWater_depth",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "ObservedProperties",
+            "body": {
+                "name": "GroundWater depth",
+                "definition": "https://data.geoscience.fr/ncl/ObsProp/186",
+                "description": "GroundWater depth",
+                "properties": {
+                    "localId": 1,
+                    "owner": "https://data.geoscience.fr/",
+                    "recommendedUnit": "???"
+                }
+            }
+        }, {
+            "id": "Water_Temperature",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "ObservedProperties",
+            "body": {
+                "name": "Water Temperature",
+                "definition": "https://data.geoscience.fr/ncl/ObsProp/187",
+                "description": "Water Temperature",
+                "properties": {
+                    "localId": 1,
+                    "owner": "https://data.geoscience.fr/",
+                    "recommendedUnit": "???"
+                }
+            }
+        }, {
+            "id": "Battery_voltage_com",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "ObservedProperties",
+            "body": {
+                "name": "Battery voltage data communication module",
+                "definition": "https://data.geoscience.fr/ncl/ObsProp/189",
+                "description": "Battery voltage in the data communication module",
+                "properties": {
+                    "localId": 1,
+                    "owner": "https://data.geoscience.fr/",
+                    "recommendedUnit": "???"
+                }
+            }
+        }, {
+            "id": "Battery_voltage_on_Sensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "ObservedProperties",
+            "body": {
+                "name": "Battery voltage sensor",
+                "definition": "https://data.geoscience.fr/ncl/ObsProp/190",
+                "description": "Battery voltage in the sensor",
+                "properties": {
+                    "localId": 1,
+                    "owner": "https://data.geoscience.fr/",
+                    "recommendedUnit": "???"
+                }
+            }
+        }, {
+            "id": "Water_conductivity",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "ObservedProperties",
+            "body": {
+                "name": "Water conductivity 25°C",
+                "definition": "https://data.geoscience.fr/ncl/ObsProp/191",
+                "description": "Water conductivity measured at 25°C",
+                "properties": {
+                    "localId": 1,
+                    "owner": "https://data.geoscience.fr/",
+                    "recommendedUnit": "???"
+                }
+            }
+        }, {
+            "id": "GroundWater_depth_Sensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Sensors",
+            "body": {
+                "name": "Groundwater Depth Sensor",
+                "description": "Groundwater depth measurement by electronic probe",
+                "encodingType": "application/pdf",
+                "metadata": "https://data.geoscience.fr/ncl/Proc/70",
+                "properties": {}
+            }
+        }, {
+            "id": "Water_Temperature_Sensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Sensors",
+            "body": {
+                "name": "Water Temperature Sensor",
+                "description": "Digital recording teletransmitted (for temperature)",
+                "encodingType": "application/pdf",
+                "metadata": "https://data.geoscience.fr/ncl/Proc/75",
+                "properties": {}
+            }
+        }, {
+            "id": "Battery_voltage_com_Sensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Sensors",
+            "body": {
+                "name": "Battery voltage communication Sensor",
+                "description": "Sensor for Battery voltage data communication module",
+                "encodingType": "application/pdf",
+                "metadata": "https://data.geoscience.fr/ncl/Proc/75",
+                "properties": {}
+            }
+        }, {
+            "id": "Battery_voltage_on_Sensor_Sensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Sensors",
+            "body": {
+                "name": "Battery voltage sensor",
+                "description": "Battery voltage in the sensor",
+                "encodingType": "application/pdf",
+                "metadata": "https://data.geoscience.fr/ncl/Proc/75",
+                "properties": {}
+            }
+        }, {
+            "id": "Water_conductivity_Sensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Sensors",
+            "body": {
+                "name": "Water conductivity 25°C Sensor",
+                "description": "Water conductivity 25°C Sensor",
+                "encodingType": "application/pdf",
+                "metadata": "https://data.geoscience.fr/ncl/Proc/75",
+                "properties": {}
+            }
+        }, {
+            "id": "WQ_EF",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Things",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE",
+                "description": "GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+                "properties": {
+                    "id": "https://data.geoscience.fr/id/EMF/GroundwaterQuantity/00463X0036",
+                    "mediaMonitored": {
+                        "href": "http://inspire.ec.europa.eu/codelist/MediaValue/water",
+                        "title": "water"
+                    },
+                    "purpose": {
+                        "href": "https://data.geoscience.fr/ncl/FunMaMa/52",
+                        "title": "Ground water level measurement"
+                    },
+
+                    "measurementRegime": {
+                        "href": "http://inspire.ec.europa.eu/codelist/MeasurementRegimeValue/continuousDataCollection",
+                        "title": "Continuous data collection"
+                    },
+                    "mobile": false,
+                    "resultAcquisitionSource": {
+                        "href": "http://inspire.ec.europa.eu/codelist/ResultAcquisitionSourceValue/inSitu/",
+                        "title": "in-situ"
+                    },
+                    "specialisedEMFType": {
+                        "href": "http://id.eaufrance.fr/ddd/PTE/2.1#Piezometre",
+                        "title": "Piezometre"
+                    },
+                    "Commune": {
+                        "@id": "http://id.insee.fr/geo/commune/57648",
+                        "name": "SERVIGNY-LES-RAVILLE",
+                        "@type": "http://data.ign.fr/def/geofla#Commune"
+                    },
+                    "Departement": {
+                        "@id": "http://id.insee.fr/geo/departement/57",
+                        "name": "MOSELLE",
+                        "@type": "http://data.ign.fr/def/geofla#Departement"
+                    },
+                    "Region": {
+                        "@id": "http://id.insee.fr/geo/region/44",
+                        "name": "GRAND EST",
+                        "@type": "http://data.ign.fr/def/geofla#Region"
+                    },
+                    "altitude_point_eau": {
+                        "value": 271.89,
+                        "uom": "https://data.geoscience.fr/ncl/urf/111"
+                    },
+                    "altitude_repere": {
+                        "value": 271.91,
+                        "uom": "https://data.geoscience.fr/ncl/urf/111"
+                    }
+                }
+
+            }
+        }, {
+            "id": "EF_Locations",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Locations",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE Location",
+                "description": "Location of GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+                "encodingType": "application/geo+json",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [6.44534450050834, 49.0783744435215]
+                },
+                "properties": {},
+                "Things": [{
+                        "@iot.id": "$WQ_EF"
+                    }
+                ]
+
+            }
+        },
+        {
+            "id": "FeatureOfInterestArea",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "FeaturesOfInterest",
+            "body": {
+                "name": "Entite hydrogeologique 143AE05",
+                "description": "Entite hydrogeologique 143AE05",
+                "encodingType": "application/geo+json",
+                "feature": {
+                    "type": "Point",
+                    "coordinates": [6.44534450050834, 49.0783744435215]
+                },
+                "properties": {
+                    "commune": "DOMEVRE-SUR-DURBION",
+                    "area": 12.71,
+                    "area_uom": "km2",
+                    "population": 290
+                }
+
+            }
+        }, {
+            "id": "FeatureOfInterestSample",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "FeaturesOfInterest",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE Sample",
+                "description": "Sample for GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+                "encodingType": "application/geo+json",
+                "feature": {
+                    "type": "Point",
+                    "coordinates": [6.44534450050834, 49.0783744435215]
+                },
+                "properties": {}
+
+            }
+        },
+        {
+            "id": "DatastreamDepth",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Datastreams",
+            "body": {
+                "name": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for Groundwater Depth",
+                "description": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for Groundwater Depth",
+                "properties": {},
+                "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                "Sensor": {
+                    "@iot.id": "$GroundWater_depth_Sensor"
+                },
+                "unitOfMeasurement": {
+                    "name": "Degree Celcius",
+                    "symbol": "°C",
+                    "definition": "https://qudt.org/vocab/unit/DEG_C"
+                },
+                "Thing": {
+                    "@iot.id": "$WQ_EF"
+                },
+                "ObservedProperty": {
+                    "@iot.id": "$GroundWater_depth"
+                }
+            }
+        },
+        {
+            "id": "DatastreamTemp",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Datastreams",
+            "body": {
+                "name": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for Water Temperature",
+                "description": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for Water Temperature",
+                "properties": {},
+                "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                "Sensor": {
+                    "@iot.id": "$Water_Temperature_Sensor"
+                },
+                "unitOfMeasurement": {
+                    "name": "Degree Celcius",
+                    "symbol": "°C",
+                    "definition": "https://qudt.org/vocab/unit/DEG_C"
+                },
+                "Thing": {
+                    "@iot.id": "$WQ_EF"
+                },
+                "ObservedProperty": {
+                    "@iot.id": "$Water_Temperature"
+                }
+            }
+        }, {
+            "id": "DatastreamBattery_voltage_com",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Datastreams",
+            "body": {
+                "name": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for battery voltage in the data communication module",
+                "description": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for battery voltage in the data communication module",
+                "properties": {},
+                "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                "Sensor": {
+                    "@iot.id": "$Battery_voltage_com_Sensor"
+                },
+                "unitOfMeasurement": {
+                    "name": "Degree Celcius",
+                    "symbol": "°C",
+                    "definition": "https://qudt.org/vocab/unit/DEG_C"
+                },
+                "Thing": {
+                    "@iot.id": "$WQ_EF"
+                },
+                "ObservedProperty": {
+                    "@iot.id": "$Battery_voltage_com"
+                }
+            }
+        }, {
+            "id": "DatastreamBattery_voltage_on_Sensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Datastreams",
+            "body": {
+                "name": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for battery voltage in the sensor",
+                "description": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for battery voltage in the sensor",
+                "properties": {},
+                "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                "Sensor": {
+                    "@iot.id": "$Battery_voltage_on_Sensor_Sensor"
+                },
+                "unitOfMeasurement": {
+                    "name": "Degree Celcius",
+                    "symbol": "°C",
+                    "definition": "https://qudt.org/vocab/unit/DEG_C"
+                },
+                "Thing": {
+                    "@iot.id": "$WQ_EF"
+                },
+                "ObservedProperty": {
+                    "@iot.id": "$Battery_voltage_on_Sensor"
+                }
+            }
+        }, {
+            "id": "DatastreamWater_conductivity",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Datastreams",
+            "body": {
+                "name": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for water conductivity measured at 25°C",
+                "description": "Datastream on Lorraine à SERVIGNY-LES-RAVILLE for water conductivity measured at 25°C",
+                "properties": {},
+                "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+                "Sensor": {
+                    "@iot.id": "$Water_conductivity_Sensor"
+                },
+                "unitOfMeasurement": {
+                    "name": "Degree Celcius",
+                    "symbol": "°C",
+                    "definition": "https://qudt.org/vocab/unit/DEG_C"
+                },
+                "Thing": {
+                    "@iot.id": "$WQ_EF"
+                },
+                "ObservedProperty": {
+                    "@iot.id": "$Water_conductivity"
+                }
+            }
+        },
+        {
+            "id": "ObservationTemp",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Observations",
+            "body": {
+                "phenomenonTime": "2020-01-01T00:00:00.000Z/2020-01-01T01:00:00.000Z",
+                "resultTime": null,
+                "result": 5,
+                "Datastream": {
+                    "@iot.id": "$DatastreamTemp"
+                },
+                "FeatureOfInterest": {
+                    "@iot.id": "$FeatureOfInterestSample"
+                }
+            }
+        },
+		{
+            "id": "Sampling",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Samplings",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE Sampling",
+                "description": "Sampling for GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+                "encodingType": "application/geo+json",
+                "parameters": {
+					"commune": "DOMEVRE-SUR-DURBION",
+					"area" : 12.71,
+					"area_uom": "km2",
+					"population": 290
+				},
+				"samplingLocation": {
+                    "type": "Point",
+                    "coordinates": [6.44534450050834, 49.0783744435215]
+                },
+				"time": "2012-12-31T23:00:00Z",
+				"atDepth": 1,
+				"depthUom" : "cm",
+				"SampledFeature": {
+                        "@iot.id": "$FeatureOfInterestArea"
+                    },
+				"Samples": [{
+                        "@iot.id": "$FeatureOfInterestSample"
+                    }],
+				"Thing": {
+                        "@iot.id": "$WQ_EF"
+                    }
+					
+            }
+        },
+
+		{
+            "id": "SamplingProcedure",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "SamplingProcedures",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE Sampling Procedure",
+                "description": "Sampling Procedure for GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+				"definition": "http://code.lists.org/SamplingProcedures/Proc1234",
+                "properties": {},
+				"Samplings": [{
+                        "@iot.id": "$Sampling"
+                    }]
+					
+            }
+        },
+
+		{
+            "id": "Sampler",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Samplers",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE Sampler",
+                "description": "Sampler for GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+				"samplerType": "Sampler Type",
+                "properties": {},
+				"Samplings": [{
+                        "@iot.id": "$Sampling"
+                    }],
+					
+				"SamplingProcedure": {
+                        "@iot.id": "$SamplingProcedure"
+                    }
+					
+            }
+        },
+	
+{
+            "id": "PreparationProcedure",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "PreparationProcedures",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE Preparation Procedure",
+                "description": "Preparation Procedure for GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+				"definition": "http://code.lists.org/PreparationProcedures/Proc1234",
+                "properties": {}
+					
+            }
+        }, 
+		
+		{
+            "id": "PreparationStep",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "PreparationSteps",
+            "body": {
+                "name": "Calcaires du Muschelkalk de Lorraine à SERVIGNY-LES-RAVILLE Sample Preparation Step",
+                "description": "Sample Preparation Step for GroundWater Quantity Environmental monitoring facility monitoring ground water level",
+				"link": "http://code.lists.org/SamplingProcedures/Proc1234",
+                "properties": {},
+				"time": "2020-01-01T00:00:00.000Z",
+				"PreparedSample": {
+                        "@iot.id": "$FeatureOfInterestSample"
+                    },
+				"PreparationProcedure": {
+                        "@iot.id": "$PreparationProcedure"
+                    }
+					
+            }
+        },
+
+{
+            "id": "FeatureTypeSample",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "FeatureTypes",
+            "body": {
+                "name": "Sample",
+                "description": "Sample taken for measurements",
+				"definition": "http://code.lists.org/FeatureTypes/WaterSample",
+                "properties": {},
+				"Features": [{
+                        "@iot.id": "$FeatureOfInterestSample"
+                    }]
+					
+            }
+        },
+
+{
+            "id": "FeatureTypeSampleArea",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "FeatureTypes",
+            "body": {
+                "name": "Sample",
+                "description": "Area for Sample for measurements",
+				"definition": "http://code.lists.org/FeatureTypes/WaterSampleArea",
+                "properties": {},
+				"Features": [{
+                        "@iot.id": "$FeatureOfInterestArea"
+                    }]
+					
+            }
+        },
+
+{
+            "id": "RelationRoleSampledFeature",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "RelationRoles",
+            "body": {
+                "name": "Sampled Feature",
+                "description": "Relation Role for Sampled Feature",
+				"definition": "http://code.lists.org/req/sam-cpt/Sample/sampledFeature-sem",
+				"inverseName": "Sample",
+				"inverseDefinition": "http://code.lists.org/req/sam-cpt/Sample/???",
+                "properties": {}
+            }
+        },	
+
+{
+            "id": "Sample-SampledFeature",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "RelatedFeatures",
+            "body": {
+				"Source": {
+                        "@iot.id": "$FeatureOfInterestSample"
+                    },
+				"Target": {
+                        "@iot.id": "$FeatureOfInterestArea"
+                    },
+				"RelationRole": {
+                        "@iot.id": "$RelationRoleSampledFeature"
+                    }
+					
+            }
+        },		
+		
+		
+{
+            "id": "DeploymentTempSensor",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "Deployments",
+            "body": {
+                "name": "Deployment Temperature Sensor",
+                "description": "Deployment for Temperature Sensor",
+                "properties": {},
+				"reason": "Measuring Temperature",
+				"atDepth": 12,
+				"depthUom": "cm",
+				"deploymentTime": "2020-01-01T00:00:00.000Z/2024-01-01T01:00:00.000Z",
+				"Sensor": {
+                        "@iot.id": "$Water_Temperature_Sensor"
+                    },
+				"Host": {
+                        "@iot.id": "$WQ_EF"
+                    }
+				
+            }
+        },			
+		
+{
+            "id": "ObservingProcedureTemp",
+            "atomicityGroup": "group1",
+            "method": "post",
+            "url": "ObservingProcedures",
+            "body": {
+                "name": "Observing Procedure Temperature",
+                "description": "Observing Procedure Temperature",
+				"definition": "http://code.list.org/ObservingProcedures/WaterTemperature",
+                "properties": {},
+				"Sensors": [{
+                        "@iot.id": "$Water_Temperature_Sensor"
+                    }],
+				"Datastreams": [{
+                        "@iot.id": "$DatastreamTemp"
+                    }]
+				
+            }
+        }
+
+
+    ]
+}
