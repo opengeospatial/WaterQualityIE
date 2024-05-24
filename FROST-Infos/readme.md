@@ -52,4 +52,4 @@ The following example first creates a Sensor with the id "sensor1", then creates
 
 
 ## Batch Upload file for WQ IE STA
-We have provided an [example of a batch upload file](https://github.com/opengeospatial/WaterQualityIE/blob/master/FROST-Infos/BatchSTA-WQ-IE.json) for the WQ IE STA. This file can be used as a template for generating dumps from datasources.
+An [example of a batch upload file](https://github.com/opengeospatial/WaterQualityIE/blob/master/FROST-Infos/BatchSTA-WQ-IE.json) for the WQ IE STA is available. This file can be used as a template for generating batch upload files from existing datasources for upload into FROST via the batch upload functionality.
