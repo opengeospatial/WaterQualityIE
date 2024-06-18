@@ -10,17 +10,20 @@ The [WaterQualityIE](https://github.com/opengeospatial/WaterQualityIE) repo cont
     - /!\ planned exception :  Tuesday 1st of November meeting is moved to Wed 2nd/11 same time slot (OGC Calendar is up to date) /!\ 
 - https://meet.goto.com/ogc-wqie 
 
+## Produced so far
+
+- living meeting minutes document: https://docs.google.com/document/d/1x9VigCyJRr2uuox6gwCPwOy4v2yxG0VLFSsytsv4pLI/edit#heading=h.a3aj1aoqt9m8 
+- deployment documentation: https://docs.google.com/document/d/1Oqjxrz8uY_Q9OKBwEM2ZufrCEnlYvA4vWIIJSiMyGT4
+- experimental implementation in FROST (all this feeds STA 2.0 work !): https://github.com/hylkevds/FROST-Server.Plugin.WaterQualityIE
+- modelling exercise: https://github.com/opengeospatial/WaterQualityIE/tree/master/Model
+- Web Client Demo: https://api4inspire.k8s.ilt-dmz.iosb.fraunhofer.de/servlet/is/226/ 
 
 ## Participate
 - joining the group -> contact info@ogc.org
-- the living meeting minutes document is available here : https://docs.google.com/document/d/1x9VigCyJRr2uuox6gwCPwOy4v2yxG0VLFSsytsv4pLI/edit#heading=h.a3aj1aoqt9m8 
-- the modelling exercise is available here : https://github.com/opengeospatial/WaterQualityIE/tree/master/Model
-
 - add yourself to the WQ IE mailing list (<water-quality-ie@lists.ogc.org>)
     - For non-members -> https://lists.ogc.org/mailman/listinfo/water-quality-ie
     - OGC member can add themselve like every other OGC Group
 - slides presented are available in the <https://github.com/opengeospatial/WaterQualityIE/tree/master/relevant_material> folder
-
 
 ## Contributing to the GitHub repository
 
