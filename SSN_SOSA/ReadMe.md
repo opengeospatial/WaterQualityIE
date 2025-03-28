@@ -1,0 +1,1 @@
+Folder to craft examples for SSN/SOSA representations (latest version currently under revision) of WQ IE object diagrams
