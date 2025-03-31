@@ -1,0 +1,106 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+
+### Entités principales
+#todo HB nom d'entité (partout)
+:Loire_River rdf:type sosa:FeatureOfInterest ; 
+    dct:identifier "0000" ;
+	#sosa-oms:madeOnPlatform :ObsCappH ;
+	#?property made for observation, not for capability
+	#sosa-oms:madeOnPlatform :ObsCapDO ;	
+	#?property made for observation, not for capability
+	sosa:isFeatureOfInterestOf :pH_ObsA ;
+	sosa:isFeatureOfInterestOf :DissolvedOxygenObsA ;
+	sosa-oms:relatedSampling :RawSamplingAct
+	.
+
+:ObsCappH rdf:type ssn-system:SystemCapability ;
+    sosa:hasUltimateFeatureOfInterestt :Loire_River ; 
+		sosa:hasFeatureOfInterest :SpatialSample_Station 
+	.
+
+:ObsCapDO rdf:type ssn-system:SystemCapability ;
+    sosa:hasUltimateFeatureOfInterestt :Loire_River ;	
+	sosa:hasFeatureOfInterest :SpatialSample_Station 
+	.
+
+#todo HB nom d'entité (partout)
+:LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
+    dct:identifier "D4000000" .
+    #oms:observingCapability :ObsCappH ;
+	#?
+	#oms:observingCapability :ObsCapDO .
+	#?
+
+### Procédures et Propriétés observables
+:pH_determination rdf:type :ObservingProcedure ;
+	#oms:relatedObservation :pH_ObsA ;
+    skos:exactMatch <https://id.eaufrance.fr/met/814> .
+
+#todo HB rajout label d'entité
+<https://id.eaufrance.fr/par/1302> rdf:type sosa:Property  .
+
+#todo HB rajout label d'entité
+<https://id.eaufrance.fr/met/393> rdf:type :ObservingProcedure .
+
+#todo HB rajout label d'entité
+<https://id.eaufrance.fr/par/1311>rdf:type sosa:Property .
+
+### Échantillonnage
+:RawSamplingAct rdf:type sosa:Sampling ;
+    oms:parameter "{'depth': 2, 'unit': 'm'}" ;
+	#?pas sûr comment représenter ça
+    sosa:resultTime "2020-04-17"^^xsd:date ;
+    #oms:samplingLocation "GM_Object" ;
+	#?GM_Object?
+    sosa:featureOfInterest :Loire_River ;
+	sosa:featureOfInterest :SpatialSample_Station ;
+    sosa:hasResult :RawSample	
+	.
+
+:RawSample rdf:type sosa:MaterialSample ;
+    sosa:hasSampledFeature :Loire_River ;
+	sosa:hasOriginalSample :SpatialSample_Station ;
+	sosa:isResultOf :RawSamplingAct ;
+	sosa:relatedObservation :pH_ObsA ;
+	sosa:relatedObservation :DissolvedOxygenObsA ;	
+	.
+
+#todo HB eventuellemnt le vrai URI du spatial sample
+:SpatialSample_Station rdf:type sosa:SpatialSample ; 
+    sosa:hasSampledFeature :Loire_River ;
+	sosa:isResultOf :RawSamplingAct ;
+	sosa:hasResult :RawSample ;
+	#oms:observingCapability :ObsCappH ;
+#?not sure how to map ObservingCapability
+	#oms:observingCapability :ObsCapDO 
+#?not sure how to map ObservingCapability
+	.
+
+### Observations
+:pH_ObsA rdf:type sosa:Observation ;
+    sosa:observedProperty <https://id.eaufrance.fr/par/1302> ;
+    sosa:usedProcedure :pH_determination ;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:relatedObservation :DissolvedOxygenObsA ;
+    sosa:resultQuality "preliminary" ;
+    sosa:resultTime "2020-04-17"^^xsd:date ;
+    sosa:phenomenonTime "2020-04-17"^^xsd:date ;
+    sosa:hasSimpleResult "8.1"^^xsd:float .
+
+
+:DissolvedOxygenObsA rdf:type sosa:Observation ;
+    sosa:observedProperty <https://id.eaufrance.fr/par/1311>;
+    sosa:usedProcedure <https://id.eaufrance.fr/met/393>;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:resultQuality "preliminary" ;
+    sosa:resultTime "2020-04-17"^^xsd:date ;
+    sosa:phenomenonTime "2020-04-17"^^xsd:date ;
+	sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:hasSimpleResult "9.2 mg(O2)/L" .
