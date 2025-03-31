@@ -1,0 +1,66 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix oms: <http://namespace/oms/>.
+
+#todo HB appliquer la même structure que Aligned_NEW_SW_DO_pH_Observation.ttl
+
+### Entités principales
+:Loire_River rdf:type sosa:FeatureOfInterest ;
+    dct:identifier "0000" ;
+	sosa-oms:madeOnPlatform :ObsCappH ;
+	#?property made for observation, not for capability
+	sosa-oms:madeOnPlatform :ObsCapDO 	
+	#?property made for observation, not for capability
+	 
+	.
+
+:ObsCappH rdf:type oms:ObservingCapability ;
+#?not sure how to map ObservingCapability
+    sosa:hasUltimateFeatureOfInterestt :Loire_River ;
+	sosa:hasFeatureOfInterest :SpatialSample_Station ;
+	sosa:isHostedBy :LOIRE_A_JARGEAU_WQ_Station
+	.
+
+:ObsCapDO rdf:type :ObservingCapability ;
+#?not sure how to map ObservingCapability
+    sosa:hasUltimateFeatureOfInterestt :Loire_River ;
+	sosa:hasFeatureOfInterest :SpatialSample_Station ;
+	sosa-oms:madeOnPlatform :LOIRE_A_JARGEAU_WQ_Station #?
+	.
+
+:LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
+    dct:identifier "D4000000" ;
+    oms:observingCapability :ObsCappH ;
+	#?not sure how to map observingCapability
+	oms:observingCapability :ObsCapDO .
+	#?not sure how to map observingCapability
+
+### Procédures et Propriétés observables
+:pH_determination rdf:type :ObservingProcedure ;
+	skos:exactMatch <https://id.eaufrance.fr/met/814> .
+
+:pH rdf:type sosa:Property ;
+	skos:exactMatch  <https://id.eaufrance.fr/par/1302> .
+
+:DissolvedOxygen_OpticalMethod rdf:type :ObservingProcedure ;
+	skos:exactMatch  <https://id.eaufrance.fr/met/393> .
+
+:DissolvedOxygen rdf:type sosa:Property;
+	skos:exactMatch <https://id.eaufrance.fr/par/1311> .
+
+### Échantillonnage
+
+:SpatialSample_Station rdf:type sosa:SpatialSample ; 
+    sosa:hasSampledFeature :Loire_River ;
+	oms:observingCapability :ObsCappH ;
+#?not sure how to map observingCapability
+	oms:observingCapability :ObsCapDO 
+#?not sure how to map observingCapability
+	.
+
+
