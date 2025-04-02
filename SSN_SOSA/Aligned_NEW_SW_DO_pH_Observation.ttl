@@ -86,8 +86,18 @@
 	.
 
 ### Observations
+## Question HB : How adding result precision like  measurement uncertainty, LQ, LD, LS ?
+### LQ : 2
+### LD : /
+### LS : /
+### measurement uncertainty : 5 (uom ?)
+### https://id.eaufrance.fr/nsa/155#1 "Résultat sup seuil de quantification et inf au seuil de saturation"
+### https://id.eaufrance.fr/nsa/414#1 "Une valeur est déclarée « Correcte » lorsque elle est estimée valide au stade de validation indiquée dans l'information « statut de la donnée » et vis-à-vis de la finalité recherchée."
+###Statut de l'analyse : https://id.eaufrance.fr/nsa/446#3 "Donnée contrôlée niveau 2 (données validées) : Le producteur regarde et vérifie l'ensemble de la chaîne d'acquisition et la cohérence des données (par exemple : depuis le prélèvement, conditionnement, flaconnage, transport, mesure en laboratoire)."
+### Analyse réalisé sous accréditation : https://id.eaufrance.fr/nsa/299#1 "Analyse réalisée par un laboratoire officiellement accrédité pour cette tâche par le Comité Français d'Accréditation (COFRAC) ou un autre organisme d’accréditation similaire, en respectant notamment les spécifications de la norme ISO 17025. L’analyse est fournie sous logo de l’organisme accréditeur"
+### manque uom : https://data.geoscience.fr/ncl/uom/558
 :pH_ObsA rdf:type sosa:Observation ;
-    sosa:observedProperty <https://id.eaufrance.fr/par/1302> ;
+    sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/626> ;
     sosa:usedProcedure :pH_determination ;
     sosa:ultimateFeatureOfInterest :Loire_River ;
     sosa:relatedObservation :DissolvedOxygenObsA ;
@@ -98,6 +108,7 @@
 
 
 :DissolvedOxygenObsA rdf:type sosa:Observation ;
+## Question HB : How adding measurement uncertainty, LOQ, LOD ?
     sosa:observedProperty <https://id.eaufrance.fr/par/1311>;
     sosa:usedProcedure <https://id.eaufrance.fr/met/393>;
     sosa:ultimateFeatureOfInterest :Loire_River ;
