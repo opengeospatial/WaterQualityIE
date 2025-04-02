@@ -8,9 +8,9 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
 
 ### Entités principales
-#todo HB nom d'entité (partout)
+#todo HB nom d'entité (partout) <http://id.eaufrance.fr/CoursEau_Topage2024/04C0000002000808543>
 :Loire_River rdf:type sosa:FeatureOfInterest ; 
-    dct:identifier "0000" ;
+    dct:identifier "04C0000002000808543" ;
 	#sosa-oms:madeOnPlatform :ObsCappH ;
 	#?property made for observation, not for capability
 	#sosa-oms:madeOnPlatform :ObsCapDO ;	
@@ -30,7 +30,7 @@
 	sosa:hasFeatureOfInterest :SpatialSample_Station 
 	.
 
-#todo HB nom d'entité (partout)
+#todo HB nom d'entité (partout) <https://id.eaufrance.fr/StationMesureEauxSurface/04050000>
 :LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
     dct:identifier "D4000000" .
     #oms:observingCapability :ObsCappH ;
@@ -41,10 +41,12 @@
 ### Procédures et Propriétés observables
 :pH_determination rdf:type :ObservingProcedure ;
 	#oms:relatedObservation :pH_ObsA ;
+	rdfs:label  "Qualité de l'eau - Détermination du pH (NF EN ISO 10523 Mai 2012 / T90-418)"@fr;
     skos:exactMatch <https://id.eaufrance.fr/met/814> .
 
 #todo HB rajout label d'entité
-<https://id.eaufrance.fr/par/1302> rdf:type sosa:Property  .
+<https://data.geoscience.fr/ncl/ObsProp/626> rdf:type sosa:Property  ;
+	rdfs:label "Hydrogen Potential (pH)"@en . 
 
 #todo HB rajout label d'entité
 <https://id.eaufrance.fr/met/393> rdf:type :ObservingProcedure .
