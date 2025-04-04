@@ -1,0 +1,1 @@
+The living source document during the IE was available here : https://docs.google.com/spreadsheets/d/1NGYubhJTbd3nYrMvEKHuMWJacPzbWUgq08yeV1APL4M/edit?usp=sharing 
