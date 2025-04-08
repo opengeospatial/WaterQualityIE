@@ -11,10 +11,6 @@
 #todo HB nom d'entité (partout)
 :Loire_River rdf:type sosa:FeatureOfInterest ; 
     dct:identifier "0000" ;
-	#sosa-oms:madeOnPlatform :ObsCappH ;
-	#?property made for observation, not for capability
-	#sosa-oms:madeOnPlatform :ObsCapDO ;	
-	#?property made for observation, not for capability
 	sosa:isFeatureOfInterestOf :pH_ObsA ;
 	sosa:isFeatureOfInterestOf :DissolvedOxygenObsA ;
 	sosa-oms:relatedSampling :RawSamplingAct
@@ -32,16 +28,22 @@
 
 #todo HB nom d'entité (partout)
 :LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
-    dct:identifier "D4000000" .
-    #oms:observingCapability :ObsCappH ;
-	#?
-	#oms:observingCapability :ObsCapDO .
-	#?
+    dct:identifier "D4000000" ;
+	sosa:deployedSystem [ a sosa:Sensor ;
+	 ssn-system:hasSystemCapability :ObsCappH ;
+	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1302> ;
+	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/814> .	 
+	];
+	sosa:deployedSystem [ a sosa:Sensor ;
+	 ssn-system:hasSystemCapability :ObsCapDO ;	 
+	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1311> ;
+	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/939> .
+	]
+	.
+    
 
 ### Procédures et Propriétés observables
-:pH_determination rdf:type :ObservingProcedure ;
-	#oms:relatedObservation :pH_ObsA ;
-    skos:exactMatch <https://id.eaufrance.fr/met/814> .
+<https://id.eaufrance.fr/met/814> rdf:type :ObservingProcedure .
 
 #todo HB rajout label d'entité
 <https://id.eaufrance.fr/par/1302> rdf:type sosa:Property  .
@@ -76,17 +78,13 @@
 :SpatialSample_Station rdf:type sosa:SpatialSample ; 
     sosa:hasSampledFeature :Loire_River ;
 	sosa:isResultOf :RawSamplingAct ;
-	sosa:hasResult :RawSample ;
-	#oms:observingCapability :ObsCappH ;
-#?not sure how to map ObservingCapability
-	#oms:observingCapability :ObsCapDO 
-#?not sure how to map ObservingCapability
+	sosa:hasResult :RawSample ;	
 	.
 
 ### Observations
 :pH_ObsA rdf:type sosa:Observation ;
     sosa:observedProperty <https://id.eaufrance.fr/par/1302> ;
-    sosa:usedProcedure :pH_determination ;
+    sosa:usedProcedure  <https://id.eaufrance.fr/met/814> ;
     sosa:ultimateFeatureOfInterest :Loire_River ;
     sosa:relatedObservation :DissolvedOxygenObsA ;
     sosa:resultQuality "preliminary" ;

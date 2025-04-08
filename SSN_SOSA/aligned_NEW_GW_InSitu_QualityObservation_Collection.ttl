@@ -12,7 +12,7 @@
 
 # Observing Capability
 :ObsCap1 rdf:type ssn-system:SystemCapability ;
-    sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
+    sosa:forProperty <https://data.geoscience.fr/ncl/ObsProp/187> ;
     sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/ncl/feature/GW/507AC00> ;
 	ssn-system:hasSystemProperty  <https://data.geoscience.fr/ncl/ObsProp/187>	.
 	
@@ -50,6 +50,8 @@
 	
 # Sensor (Observer)
 :WaterTemperatureSensor rdf:type sosa:Sensor ;
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
+    sosa:observes <https://data.geoscience.fr/ncl/ObsProp/187> ;
 	ssn-system:hasSystemCapability :ObsCap1 ;
     sosa:madeObservation :InSituObsA ;
     geo:hasGeometry :Location1 .
