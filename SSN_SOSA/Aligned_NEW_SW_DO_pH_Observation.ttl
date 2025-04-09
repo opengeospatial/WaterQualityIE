@@ -10,7 +10,7 @@
 ### Entités principales
 #todo HB nom d'entité (partout) <http://id.eaufrance.fr/CoursEau_Topage2024/04C0000002000808543>
 :Loire_River rdf:type sosa:FeatureOfInterest ; 
-    dct:identifier "04C0000002000808543" ;
+  dct:identifier "04C0000002000808543" ;
 	#sosa-oms:madeOnPlatform :ObsCappH ;
 	#?property made for observation, not for capability
 	#sosa-oms:madeOnPlatform :ObsCapDO ;	
@@ -32,11 +32,9 @@
 
 #todo HB nom d'entité (partout) <https://id.eaufrance.fr/StationMesureEauxSurface/04050000>
 :LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
-    dct:identifier "D4000000" .
-    #oms:observingCapability :ObsCappH ;
-	#?
-	#oms:observingCapability :ObsCapDO .
-	#?
+    dct:identifier "D4000000" ;	
+	.
+    
 
 ### Procédures et Propriétés observables
 :pH_determination rdf:type :ObservingProcedure ;
@@ -78,11 +76,7 @@
 :SpatialSample_Station rdf:type sosa:SpatialSample ; 
     sosa:hasSampledFeature :Loire_River ;
 	sosa:isResultOf :RawSamplingAct ;
-	sosa:hasResult :RawSample ;
-	#oms:observingCapability :ObsCappH ;
-#?not sure how to map ObservingCapability
-	#oms:observingCapability :ObsCapDO 
-#?not sure how to map ObservingCapability
+	sosa:hasResult :RawSample ;	
 	.
 
 ### Observations
@@ -104,7 +98,12 @@
     sosa:resultQuality "preliminary" ;
     sosa:resultTime "2020-04-17"^^xsd:date ;
     sosa:phenomenonTime "2020-04-17"^^xsd:date ;
-    sosa:hasSimpleResult "8.1"^^xsd:float .
+    sosa:hasSimpleResult "8.1"^^xsd:float ;
+	sosa:sosa:madeBySensor [ a sosa:Sensor ;
+	 ssn-system:hasSystemCapability :ObsCappH ;
+	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1302> ;
+	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/814> .	 
+	].
 
 
 :DissolvedOxygenObsA rdf:type sosa:Observation ;
@@ -116,4 +115,9 @@
     sosa:resultTime "2020-04-17"^^xsd:date ;
     sosa:phenomenonTime "2020-04-17"^^xsd:date ;
 	sosa:ultimateFeatureOfInterest :Loire_River ;
-    sosa:hasSimpleResult "9.2 mg(O2)/L" .
+    sosa:hasSimpleResult "9.2 mg(O2)/L" ;
+	sosa:madeBySensor [ a sosa:Sensor ;
+	 ssn-system:hasSystemCapability :ObsCapDO ;	 
+	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1311> ;
+	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/939> .
+	] .
