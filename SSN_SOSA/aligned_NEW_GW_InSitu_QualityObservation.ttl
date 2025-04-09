@@ -12,8 +12,8 @@
 
 # Observing Capability
 :ObsCap1 rdf:type ssn-system:SystemCapability ;
-	sosa:forProperty <https://data.geoscience.fr/ncl/ObsProp/187> ;
-    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/ncl/feature/GW/507AC00> ;
+  sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
+  sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
 	ssn-system:hasSystemProperty  <https://data.geoscience.fr/ncl/ObsProp/187>	.
 	
 
@@ -24,7 +24,7 @@
 <https://data.geoscience.fr/ncl/ObsProp/187> rdf:type sosa:Property .
 
 # Feature of Interest
-<https://data.geoscience.fr/ncl/feature/GW/507AC00> rdf:type :FeatureOfInterest ;
+<https://data.geoscience.fr/id/hydrogeounit/507AC000> rdf:type :FeatureOfInterest ;
     rdfs:label "Complement de l'entité NV2: Formations plio-quaternaires de la Dombes" .
 
 # Deployment of sensors
@@ -43,7 +43,7 @@
 	sosa:deployedOnPlatform :Well_BS5001REWW .
 
 # Reference Elevation
-#todo HB eventuellrmrnt URI de l'entité (partout)
+#todo ABDEL eventuellrmrnt URI de l'entité (partout)
 :ReferenceElevation1 rdf:type :Elevation ;
     :elevation "225"^^xsd:float .
 	#property from hydro ?
@@ -79,8 +79,7 @@
 :InSituObsA rdf:type sosa:Observation ;
     sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/187> ; 
 	# dans le diagram c'est observableProperty par erreur?
-	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
-    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/ncl/feature/GW/507AC00> ;
+    sosa:hasFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC000> ;
 	sosa-oms:observationType <https://codeListRepo/.../TimeSeries> ;
 	sosa:madeBySensor :WaterTemperatureSensor ;
 	sosa-oms:madeOnPlatform :Well_BS5001REWW ;
