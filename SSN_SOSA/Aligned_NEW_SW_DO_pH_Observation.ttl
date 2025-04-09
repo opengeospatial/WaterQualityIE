@@ -28,17 +28,7 @@
 
 #todo HB nom d'entité (partout)
 :LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
-    dct:identifier "D4000000" ;
-	sosa:deployedSystem [ a sosa:Sensor ;
-	 ssn-system:hasSystemCapability :ObsCappH ;
-	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1302> ;
-	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/814> .	 
-	];
-	sosa:deployedSystem [ a sosa:Sensor ;
-	 ssn-system:hasSystemCapability :ObsCapDO ;	 
-	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1311> ;
-	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/939> .
-	]
+    dct:identifier "D4000000" ;	
 	.
     
 
@@ -90,7 +80,12 @@
     sosa:resultQuality "preliminary" ;
     sosa:resultTime "2020-04-17"^^xsd:date ;
     sosa:phenomenonTime "2020-04-17"^^xsd:date ;
-    sosa:hasSimpleResult "8.1"^^xsd:float .
+    sosa:hasSimpleResult "8.1"^^xsd:float ;
+	sosa:sosa:madeBySensor [ a sosa:Sensor ;
+	 ssn-system:hasSystemCapability :ObsCappH ;
+	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1302> ;
+	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/814> .	 
+	].
 
 
 :DissolvedOxygenObsA rdf:type sosa:Observation ;
@@ -101,4 +96,9 @@
     sosa:resultTime "2020-04-17"^^xsd:date ;
     sosa:phenomenonTime "2020-04-17"^^xsd:date ;
 	sosa:ultimateFeatureOfInterest :Loire_River ;
-    sosa:hasSimpleResult "9.2 mg(O2)/L" .
+    sosa:hasSimpleResult "9.2 mg(O2)/L" ;
+	sosa:madeBySensor [ a sosa:Sensor ;
+	 ssn-system:hasSystemCapability :ObsCapDO ;	 
+	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1311> ;
+	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/939> .
+	] .
