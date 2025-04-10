@@ -5,9 +5,9 @@
   "description": "pH at 21COL001_WQX-9830",
   "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
   "unitOfMeasurement": {
-    "name": "None",
-    "symbol": "None",
-    "definition": "None"
+    "name": "Acidity",
+    "symbol": "pH",
+    "definition": "https://qudt.org/vocab/unit/PH"
   },
   "observedArea": {
     "type": "Point",
