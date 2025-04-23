@@ -16,32 +16,28 @@
 	sosa-oms:relatedSampling :RawSamplingAct
 	.
 
-:ObsCappH rdf:type ssn-system:SystemCapability ;
-    sosa:hasUltimateFeatureOfInterestt :Loire_River ; 
-		sosa:hasFeatureOfInterest :SpatialSample_Station 
-	.
-
-:ObsCapDO rdf:type ssn-system:SystemCapability ;
-    sosa:hasUltimateFeatureOfInterestt :Loire_River ;	
-	sosa:hasFeatureOfInterest :SpatialSample_Station 
-	.
-
-#todo HB nom d'entité (partout)
+# Host and ObsCaps (Deployment)
 :LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
-    dct:identifier "D4000000" ;
-	sosa:deployedSystem [ a sosa:Sensor ;
-	 ssn-system:hasSystemCapability :ObsCappH ;
-	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1302> ;
-	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/814> .	 
-	];
-	sosa:deployedSystem [ a sosa:Sensor ;
-	 ssn-system:hasSystemCapability :ObsCapDO ;	 
-	 sosa:observes <https://data.geoscience.fr/ncl/ObsProp/1311> ;
-	 sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/939> .
-	]
-	.
-    
+    dct:identifier "D4000000" .
 
+:ObsCappH rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt :Loire_River ; 
+    sosa:hasFeatureOfInterest :SpatialSample_Station ;
+    sosa:deployedOnPlatform :LOIRE_A_JARGEAU_WQ_Station ;
+    sosa:deployedSystem [ a sosa:Sensor ;
+	 sosa:forProperty :pH ;
+	 sosa:usedProcedure :pH_determination .	 
+	] .
+
+:ObsCapDO rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt :Loire_River ; 
+    sosa:hasFeatureOfInterest :SpatialSample_Station ;
+    sosa:deployedOnPlatform :LOIRE_A_JARGEAU_WQ_Station ;
+    sosa:deployedSystem [ a sosa:Sensor ;
+	 sosa:forProperty :DO ;
+	 sosa:usedProcedure :DO_determination .	 
+	] .
+ 
 ### Procedures & Observed Properties
 :pH_determination rdf:type sosa:ObservingProcedure ;
 	#oms:relatedObservation :pH_ObsA ;
