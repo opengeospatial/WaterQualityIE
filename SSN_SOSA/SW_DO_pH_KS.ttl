@@ -7,8 +7,7 @@
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
 
-### Entités principales
-#todo HB nom d'entité (partout)
+### Main Features
 :Loire_River rdf:type sosa:FeatureOfInterest ; 
     dct:identifier "0000" ;
 	sosa:isFeatureOfInterestOf :pH_ObsA ;
