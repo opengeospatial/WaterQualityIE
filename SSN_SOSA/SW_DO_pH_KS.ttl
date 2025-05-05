@@ -20,7 +20,7 @@
     dct:identifier "D4000000" .
 
 :ObsCappH rdf:type sosa:Deployment ;
-    sosa:hasUltimateFeatureOfInterestt :Loire_River ; 
+    sosa:hasUltimateFeatureOfInterest :Loire_River ; 
     sosa:hasFeatureOfInterest :SpatialSample_Station ;
     sosa:deployedOnPlatform :LOIRE_A_JARGEAU_WQ_Station ;
     sosa:deployedSystem [ a sosa:Sensor ;
