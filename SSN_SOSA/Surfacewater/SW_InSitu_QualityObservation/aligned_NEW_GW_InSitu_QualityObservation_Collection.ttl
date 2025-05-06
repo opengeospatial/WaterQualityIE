@@ -1,0 +1,108 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ucum <https://w3id.org/cdt/ucum> .
+
+
+# Observing Capability
+:ObsCap1 rdf:type ssn-system:SystemCapability ;
+    sosa:forProperty <https://data.geoscience.fr/ncl/ObsProp/187> ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/ncl/feature/GW/507AC00> ;
+	ssn-system:hasSystemProperty  <https://data.geoscience.fr/ncl/ObsProp/187>	.
+	
+
+# Observing Procedure
+<https://data.geoscience.fr/ncl/Proc/34> rdf:type sosa-oms:ObservingProcedure .
+
+# Observable Property
+<https://data.geoscience.fr/ncl/ObsProp/187> rdf:type sosa:Property .
+
+# Feature of Interest
+<https://data.geoscience.fr/ncl/feature/GW/507AC00> rdf:type :FeatureOfInterest ;
+    rdfs:label "Complement de l'entité NV2: Formations plio-quaternaires de la Dombes" .
+
+# Deployment of sensors
+:WaterTemperatureDeployment rdf:type sosa:Deployment ;
+    :deploymentTime "1977-10-09"^^xsd:date ;
+    :relativeSensorDepth  "123??" ;
+	#property from hydro ? uknown value
+    :referenceElevation :ReferenceElevation1 ; 
+	#property from hydro ?
+    sosa:deployedSystem :WaterTemperatureSensor ;
+	sosa:deployedOnPlatform :Well_BS5001REWW .
+
+:OtherSensorDeployment rdf:type sosa:Deployment ;
+    :deploymentTime "2023-01-17"^^xsd:date ;
+    sosa:deployedSystem :OtherSensor ;
+	sosa:deployedOnPlatform :Well_BS5001REWW .
+
+# Reference Elevation
+#todo HB eventuellrmrnt URI de l'entité (partout)
+:ReferenceElevation1 rdf:type :Elevation ;
+    :elevation "225"^^xsd:float .
+	#property from hydro ?
+	
+# Sensor (Observer)
+:WaterTemperatureSensor rdf:type sosa:Sensor ;
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
+    sosa:observes <https://data.geoscience.fr/ncl/ObsProp/187> ;
+	ssn-system:hasSystemCapability :ObsCap1 ;
+    sosa:madeObservation :InSituObsA ;
+    geo:hasGeometry :Location1 .
+
+:OtherSensor rdf:type sosa:Sensor ;
+    sosa:madeObservation :InSituObsA ;
+    geo:hasGeometry :Location2 .
+
+# Host
+#todo HB nom d'entité (partout)
+:Well_BS5001REWW rdf:type sosa:Platform ;
+    rdfs:label "BS5001REWW" ;
+    geo:hasGeometry :Location1 .
+
+# Observation
+:InSituObsA rdf:type sosa:Observation ;
+    sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/187> ; 
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
+	sosa:madeBySensor :WaterTemperatureSensor ;
+	sosa-oms:madeOnPlatform :Well_BS5001REWW ;
+    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/ncl/feature/GW/507AC00> ;
+	sosa-oms:observationType <https://codeListRepo/.../TimeSeries> ;
+    sosa:resultTime "2023-02-28T14:53:00Z"^^xsd:dateTime ;
+    sosa:phenomenonTime "2023-02-28T14:53:00Z"^^xsd:dateTime ;
+	sosa-oms:validTime "2023-02-28T14:53:00Z"^^xsd:dateTime ;
+	sosa:relatedObservation :InSituObsB;	
+    sosa:hasSimpleResult "8.2 cel"^^cdt:ucum .
+	
+:InSituObsB rdf:type sosa:Observation ;
+    sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/187> ; 
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
+	sosa:madeBySensor :WaterTemperatureSensor ;
+	sosa-oms:madeOnPlatform :Well_BS5001REWW ;
+    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/ncl/feature/GW/507AC00> ;
+	sosa-oms:observationType <https://codeListRepo/.../TimeSeries> ;
+    sosa:resultTime "2023-01-10T15:37:00Z"^^xsd:dateTime ;
+    sosa:phenomenonTime "2023-01-10T15:37:00Z"^^xsd:dateTime ;
+	sosa-oms:validTime "2023-01-10T15:37:00Z"^^xsd:dateTime ;
+	sosa:relatedObservation :InSituObsA ;
+    sosa:hasSimpleResult "8.3 cel"^^cdt:ucum .
+
+# observation collection
+
+:WaterTempTimeSeries  rdf:type sosa:ObservationCollection ;	
+	sosa:hasMember :InSituObsA , :InSituObsB ;
+	sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/187> ; 
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/34> ;
+    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/ncl/feature/GW/507AC00> ;
+	sosa:madeBySensor :WaterTemperatureSensor ;
+	sosa-oms:madeOnPlatform :Well_BS5001REWW ;
+	
+	
+	
+
