@@ -8,9 +8,13 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
 
 ### Entités principales
-#todo HB nom d'entité (partout)
+#todo HB nom d'entité (partout) <http://id.eaufrance.fr/CoursEau_Topage2024/04C0000002000808543>
 :Loire_River rdf:type sosa:FeatureOfInterest ; 
-    dct:identifier "0000" ;
+  dct:identifier "04C0000002000808543" ;
+	#sosa-oms:madeOnPlatform :ObsCappH ;
+	#?property made for observation, not for capability
+	#sosa-oms:madeOnPlatform :ObsCapDO ;	
+	#?property made for observation, not for capability
 	sosa:isFeatureOfInterestOf :pH_ObsA ;
 	sosa:isFeatureOfInterestOf :DissolvedOxygenObsA ;
 	sosa-oms:relatedSampling :RawSamplingAct
@@ -26,17 +30,21 @@
 	sosa:hasFeatureOfInterest :SpatialSample_Station 
 	.
 
-#todo HB nom d'entité (partout)
+#todo HB nom d'entité (partout) <https://id.eaufrance.fr/StationMesureEauxSurface/04050000>
 :LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
     dct:identifier "D4000000" ;	
 	.
     
 
 ### Procédures et Propriétés observables
-<https://id.eaufrance.fr/met/814> rdf:type :ObservingProcedure .
+:pH_determination rdf:type :ObservingProcedure ;
+	#oms:relatedObservation :pH_ObsA ;
+	rdfs:label  "Qualité de l'eau - Détermination du pH (NF EN ISO 10523 Mai 2012 / T90-418)"@fr;
+    skos:exactMatch <https://id.eaufrance.fr/met/814> .
 
 #todo HB rajout label d'entité
-<https://id.eaufrance.fr/par/1302> rdf:type sosa:Property  .
+<https://data.geoscience.fr/ncl/ObsProp/626> rdf:type sosa:Property  ;
+	rdfs:label "Hydrogen Potential (pH)"@en . 
 
 #todo HB rajout label d'entité
 <https://id.eaufrance.fr/met/393> rdf:type :ObservingProcedure .
@@ -72,9 +80,19 @@
 	.
 
 ### Observations
+## Question HB : How adding result precision like  measurement uncertainty, LQ, LD, LS ?
+### LQ : 2
+### LD : /
+### LS : /
+### measurement uncertainty : 5 (uom ?)
+### https://id.eaufrance.fr/nsa/155#1 "Résultat sup seuil de quantification et inf au seuil de saturation"
+### https://id.eaufrance.fr/nsa/414#1 "Une valeur est déclarée « Correcte » lorsque elle est estimée valide au stade de validation indiquée dans l'information « statut de la donnée » et vis-à-vis de la finalité recherchée."
+###Statut de l'analyse : https://id.eaufrance.fr/nsa/446#3 "Donnée contrôlée niveau 2 (données validées) : Le producteur regarde et vérifie l'ensemble de la chaîne d'acquisition et la cohérence des données (par exemple : depuis le prélèvement, conditionnement, flaconnage, transport, mesure en laboratoire)."
+### Analyse réalisé sous accréditation : https://id.eaufrance.fr/nsa/299#1 "Analyse réalisée par un laboratoire officiellement accrédité pour cette tâche par le Comité Français d'Accréditation (COFRAC) ou un autre organisme d’accréditation similaire, en respectant notamment les spécifications de la norme ISO 17025. L’analyse est fournie sous logo de l’organisme accréditeur"
+### manque uom : https://data.geoscience.fr/ncl/uom/558
 :pH_ObsA rdf:type sosa:Observation ;
-    sosa:observedProperty <https://id.eaufrance.fr/par/1302> ;
-    sosa:usedProcedure  <https://id.eaufrance.fr/met/814> ;
+    sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/626> ;
+    sosa:usedProcedure :pH_determination ;
     sosa:ultimateFeatureOfInterest :Loire_River ;
     sosa:relatedObservation :DissolvedOxygenObsA ;
     sosa:resultQuality "preliminary" ;
@@ -89,6 +107,7 @@
 
 
 :DissolvedOxygenObsA rdf:type sosa:Observation ;
+## Question HB : How adding measurement uncertainty, LOQ, LOD ?
     sosa:observedProperty <https://id.eaufrance.fr/par/1311>;
     sosa:usedProcedure <https://id.eaufrance.fr/met/393>;
     sosa:ultimateFeatureOfInterest :Loire_River ;

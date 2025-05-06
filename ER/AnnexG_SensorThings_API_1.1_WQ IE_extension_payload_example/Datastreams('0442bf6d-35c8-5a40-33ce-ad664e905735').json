@@ -1,0 +1,488 @@
+{
+  "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')",
+  "@iot.id": "0442bf6d-35c8-5a40-33ce-ad664e905735",
+  "name": "pH at 21COL001_WQX-9830",
+  "description": "pH at 21COL001_WQX-9830",
+  "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+  "unitOfMeasurement": {
+    "name": "Acidity",
+    "symbol": "pH",
+    "definition": "https://qudt.org/vocab/unit/PH"
+  },
+  "observedArea": {
+    "type": "Point",
+    "coordinates": [
+      -109.0445,
+      37.328
+    ]
+  },
+  "phenomenonTime": "2010-02-17T10:25:00Z/2010-06-08T10:02:00Z",
+  "properties": {
+    "ActivityIdentifier": "21COL001_WQX-201020398_20100608_F-MSR/OBS",
+    "ActivityMediaName": "Water",
+    "ActivityTypeCode": "Field Msr/Obs"
+  },
+  "resultTime": "2010-02-17T00:00:00Z/2010-06-08T00:00:00Z",
+  "ObservedProperty": {
+    "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/ObservedProperties('818ae666-2cc0-11ef-a853-2739caff4082')",
+    "@iot.id": "818ae666-2cc0-11ef-a853-2739caff4082",
+    "name": "pH",
+    "definition": "https://cdxapps.epa.gov/oms-substance-registry-services/substance-details/17028275",
+    "description": "pH",
+    "properties": {}
+  },
+  "ObservingProcedure": {
+    "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/ObservingProcedures('USEPA-150.1')",
+    "@iot.id": "USEPA-150.1",
+    "name": "pH in Water by Electrometric Method"
+  },
+  "UltimateFeatureOfInterest": {
+    "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/FeaturesOfInterest('26b631d5-7a3a-b4d7-ff81-83fb60425f39')",
+    "@iot.id": "26b631d5-7a3a-b4d7-ff81-83fb60425f39",
+    "name": "",
+    "description": "",
+    "encodingType": "application/geo+json",
+    "feature": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -108.62807207516084,
+          37.57798907500488
+        ],
+        [
+          -108.63356320848561,
+          37.573412475012006
+        ],
+        [
+          -108.64189787513942,
+          37.55810347503566
+        ],
+        [
+          -108.65121000845829,
+          37.55535600837328
+        ],
+        [
+          -108.65580640845116,
+          37.54906227504985
+        ],
+        [
+          -108.66885060843089,
+          37.54191887506077
+        ],
+        [
+          -108.67258280842509,
+          37.53580767507026
+        ],
+        [
+          -108.67876027508214,
+          37.53486700840516
+        ],
+        [
+          -108.6951308083901,
+          37.52545360841983
+        ],
+        [
+          -108.69765487505288,
+          37.520921275093414
+        ],
+        [
+          -108.70434387504247,
+          37.51604287510098
+        ],
+        [
+          -108.70629120837276,
+          37.51004607511033
+        ],
+        [
+          -108.71562247502493,
+          37.5048218751184
+        ],
+        [
+          -108.72584180834235,
+          37.49621560846517
+        ],
+        [
+          -108.72853420833822,
+          37.49021807514118
+        ],
+        [
+          -108.72669220834098,
+          37.486786875146436
+        ],
+        [
+          -108.7315130083336,
+          37.48380827515098
+        ],
+        [
+          -108.7352880083277,
+          37.47181420850304
+        ],
+        [
+          -108.7462198083108,
+          37.46683867517745
+        ],
+        [
+          -108.75304140830013,
+          37.459226208522495
+        ],
+        [
+          -108.76421867494952,
+          37.45287660853235
+        ],
+        [
+          -108.7749712749328,
+          37.44130760855032
+        ],
+        [
+          -108.77950680825916,
+          37.440693875217995
+        ],
+        [
+          -108.78258067492095,
+          37.438614208554476
+        ],
+        [
+          -108.78975480824325,
+          37.43930660855333
+        ],
+        [
+          -108.79159340824037,
+          37.4377748085558
+        ],
+        [
+          -108.79311320823803,
+          37.43878300855425
+        ],
+        [
+          -108.80557260821865,
+          37.435336475226244
+        ],
+        [
+          -108.81561527486974,
+          37.437356608556485
+        ],
+        [
+          -108.82230367485931,
+          37.435575275225965
+        ],
+        [
+          -108.83286300817628,
+          37.43862420855449
+        ],
+        [
+          -108.83323720817573,
+          37.43709107522354
+        ],
+        [
+          -108.8368246081701,
+          37.43704680855698
+        ],
+        [
+          -108.84744160815364,
+          37.44091820855101
+        ],
+        [
+          -108.86067360813308,
+          37.43888487522061
+        ],
+        [
+          -108.86268240813001,
+          37.43980067521938
+        ],
+        [
+          -108.86474907479351,
+          37.43867967522113
+        ],
+        [
+          -108.86368740812844,
+          37.43778700855563
+        ],
+        [
+          -108.86572580812532,
+          37.43522420855989
+        ],
+        [
+          -108.87338867478007,
+          37.434561475227454
+        ],
+        [
+          -108.87743580810701,
+          37.429000675236075
+        ],
+        [
+          -108.88521260809506,
+          37.425888475240995
+        ],
+        [
+          -108.89077967475306,
+          37.425430608575
+        ],
+        [
+          -108.9021414747354,
+          37.41801447525317
+        ],
+        [
+          -108.90127980807011,
+          37.414238475259
+        ],
+        [
+          -108.90598427472946,
+          37.41078187526437
+        ],
+        [
+          -108.90420487473222,
+          37.408905675267235
+        ],
+        [
+          -108.90627027472902,
+          37.407921208602254
+        ],
+        [
+          -108.90669940806163,
+          37.404144875274795
+        ],
+        [
+          -108.9116622747207,
+          37.40382340860851
+        ],
+        [
+          -108.91989187470784,
+          37.395742475287776
+        ],
+        [
+          -108.9224448080372,
+          37.39574160862106
+        ],
+        [
+          -108.92250007470375,
+          37.39162207529417
+        ],
+        [
+          -108.92573947469884,
+          37.38848560863223
+        ],
+        [
+          -108.9310170746906,
+          37.388689475298726
+        ],
+        [
+          -108.9308978746908,
+          37.38170927530955
+        ],
+        [
+          -108.93350740802003,
+          37.38113600864379
+        ],
+        [
+          -108.93448087468528,
+          37.37893847531384
+        ],
+        [
+          -108.93826647467938,
+          37.37873080864745
+        ],
+        [
+          -108.93820627467943,
+          37.37500040865339
+        ],
+        [
+          -108.93995407467673,
+          37.3731458086561
+        ],
+        [
+          -108.93874800801194,
+          37.370812008659826
+        ],
+        [
+          -108.94107027467493,
+          37.37026147532725
+        ],
+        [
+          -108.94391120800395,
+          37.37284620865647
+        ],
+        [
+          -108.94867247466323,
+          37.37378200865503
+        ],
+        [
+          -108.94992740799461,
+          37.36627460866682
+        ],
+        [
+          -108.94680167466606,
+          37.36602460866728
+        ],
+        [
+          -108.94700107466576,
+          37.36435367533652
+        ],
+        [
+          -108.95540000798599,
+          37.36196860867348
+        ],
+        [
+          -108.95542607465268,
+          37.35926800867771
+        ],
+        [
+          -108.96210680797567,
+          37.35953820867733
+        ],
+        [
+          -108.96408307463923,
+          37.35775167534667
+        ],
+        [
+          -108.97506200795557,
+          37.35598120868269
+        ],
+        [
+          -108.97683640795282,
+          37.35353087535322
+        ],
+        [
+          -108.99138860793028,
+          37.34535007536585
+        ],
+        [
+          -108.99353907459351,
+          37.34562367536565
+        ],
+        [
+          -108.9965562079222,
+          37.35024507535832
+        ],
+        [
+          -109.01544267455961,
+          37.34852327536108
+        ],
+        [
+          -109.01590420789222,
+          37.346715675363804
+        ],
+        [
+          -109.02100987455088,
+          37.34461500870039
+        ],
+        [
+          -109.02281980788149,
+          37.3418474087047
+        ],
+        [
+          -109.02620127454281,
+          37.342491408703765
+        ],
+        [
+          -109.02818380787312,
+          37.33915147537567
+        ],
+        [
+          -109.0358404745279,
+          37.336434408713146
+        ],
+        [
+          -109.04619847451181,
+          37.326692275394926
+        ]
+      ]
+    },
+    "properties": {
+      "uri": "https://geoconnex.us/ref/mainstems/48746"
+    }
+  },
+  "Observations": [
+    {
+      "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Observations('67640052-2cc4-11ef-b610-67b15b5da8b2')",
+      "@iot.id": "67640052-2cc4-11ef-b610-67b15b5da8b2",
+      "phenomenonTime": "2010-02-17T10:25:00Z",
+      "resultTime": "2010-02-17T00:00:00Z",
+      "result": 8.33,
+      "resultQuality": "Final",
+      "parameters": {
+        "modified": "2021-05-27T22:36:07",
+        "publisher": "STORET",
+        "status": "Final",
+        "valueType": "Actual"
+      },
+      "FeatureOfInterest": {
+        "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/FeaturesOfInterest('0442bf6d-35c8-5a40-33ce-ad664e905735')",
+        "@iot.id": "0442bf6d-35c8-5a40-33ce-ad664e905735",
+        "name": "YELLOWJACKET CANYON NEAR MOUTH",
+        "description": "YELLOWJACKET CANYON NEAR MOUTH",
+        "encodingType": "application/geo+json",
+        "feature": {
+          "type": "Point",
+          "coordinates": [
+            -109.0445,
+            37.328
+          ]
+        }
+      }
+    },
+    {
+      "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Observations('6788d882-2cc4-11ef-b610-3b6de68552f6')",
+      "@iot.id": "6788d882-2cc4-11ef-b610-3b6de68552f6",
+      "phenomenonTime": "2010-04-20T11:20:00Z",
+      "resultTime": "2010-04-20T00:00:00Z",
+      "result": 8.22,
+      "resultQuality": "Final",
+      "parameters": {
+        "modified": "2021-05-27T22:58:07",
+        "publisher": "STORET",
+        "status": "Final",
+        "valueType": "Actual"
+      },
+      "FeatureOfInterest": {
+        "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/FeaturesOfInterest('0442bf6d-35c8-5a40-33ce-ad664e905735')",
+        "@iot.id": "0442bf6d-35c8-5a40-33ce-ad664e905735",
+        "name": "YELLOWJACKET CANYON NEAR MOUTH",
+        "description": "YELLOWJACKET CANYON NEAR MOUTH",
+        "encodingType": "application/geo+json",
+        "feature": {
+          "type": "Point",
+          "coordinates": [
+            -109.0445,
+            37.328
+          ]
+        }
+      }
+    },
+    {
+      "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Observations('67b2000e-2cc4-11ef-b610-b7e69dd0381e')",
+      "@iot.id": "67b2000e-2cc4-11ef-b610-b7e69dd0381e",
+      "phenomenonTime": "2010-06-08T10:02:00Z",
+      "resultTime": "2010-06-08T00:00:00Z",
+      "result": 8.24,
+      "resultQuality": "Final",
+      "parameters": {
+        "modified": "2021-05-27T23:18:30",
+        "publisher": "STORET",
+        "status": "Final",
+        "valueType": "Actual"
+      },
+      "FeatureOfInterest": {
+        "@iot.selfLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/FeaturesOfInterest('0442bf6d-35c8-5a40-33ce-ad664e905735')",
+        "@iot.id": "0442bf6d-35c8-5a40-33ce-ad664e905735",
+        "name": "YELLOWJACKET CANYON NEAR MOUTH",
+        "description": "YELLOWJACKET CANYON NEAR MOUTH",
+        "encodingType": "application/geo+json",
+        "feature": {
+          "type": "Point",
+          "coordinates": [
+            -109.0445,
+            37.328
+          ]
+        }
+      }
+    }
+  ],
+  "ObservedProperty@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/ObservedProperty",
+  "ObservingProcedure@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/ObservingProcedure",
+  "Sensor@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/Sensor",
+  "Thing@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/Thing",
+  "UltimateFeatureOfInterest@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/UltimateFeatureOfInterest",
+  "Observations@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/Observations",
+  "SourceRelatedDatastreams@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/SourceRelatedDatastreams",
+  "TargetRelatedDatastreams@iot.navigationLink": "https://wqie.internetofwater.app/FROST-Server/v1.1/Datastreams('0442bf6d-35c8-5a40-33ce-ad664e905735')/TargetRelatedDatastreams"
+}
