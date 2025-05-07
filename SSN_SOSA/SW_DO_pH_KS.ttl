@@ -1,0 +1,164 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <https://qudt.org/vocab/unit/> .
+
+### Main Features
+:Loire_River rdf:type sosa:FeatureOfInterest ; 
+    dct:identifier "0000" ;
+	sosa:isFeatureOfInterestOf :pH_ObsA ;
+	sosa:isFeatureOfInterestOf :DissolvedOxygenObsA ;
+	sosa-oms:relatedSampling :RawSamplingAct
+	.
+
+# Host and ObsCaps (Deployment)
+:LOIRE_A_JARGEAU_WQ_Station rdf:type sosa:Platform ;
+    dct:identifier "D4000000" .
+
+:ObsCappH rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterest :Loire_River ; 
+    sosa:hasFeatureOfInterest :SpatialSample_Station ;
+    sosa:deployedOnPlatform :LOIRE_A_JARGEAU_WQ_Station ;
+    sosa:deployedSystem [ a sosa:Sensor ;
+	 sosa:forProperty :pH ;
+	 sosa:usedProcedure :pH_determination	 
+	] .
+
+:ObsCapDO rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt :Loire_River ; 
+    sosa:hasFeatureOfInterest :SpatialSample_Station ;
+    sosa:deployedOnPlatform :LOIRE_A_JARGEAU_WQ_Station ;
+    sosa:deployedSystem [ a sosa:Sensor ;
+	 sosa:forProperty :DO ;
+	 sosa:usedProcedure :DO_determination	 
+	] .
+ 
+### Procedures & Observed Properties
+:pH_determination rdf:type sosa:ObservingProcedure ;
+	#sosa-oms:relatedObservation :pH_ObsA ;
+	rdfs:label  "Qualité de l'eau - Détermination du pH (NF EN ISO 10523 Mai 2012 / T90-418)"@fr;
+  rdfs:label  "Water quality - Determination of pH (NF EN ISO 10523 May 2012 / T90-418)"@en ;
+  skos:exactMatch <https://id.eaufrance.fr/met/814> .
+
+:pH rdf:type sosa:Property ;
+	#sosa-oms:relatedObservation :pH_ObsA ;
+	rdfs:label  "Potentiel en Hydrogène (pH)"@fr;
+	rdfs:label  "Potential of hydrogen (pH)"@en;
+  skos:exactMatch <https://id.eaufrance.fr/par/1302> .
+
+
+:DO_determination rdf:type sosa:ObservingProcedure ;
+	#sosa-oms:relatedObservation :DO_ObsA ;
+	rdfs:label  "Qualité de l'eau - Dosage de l'oxygène dissous - Méthode optique à la sonde (NF ISO 17289 Août 2014 / T90-289) "@fr;
+  rdfs:label  "Water quality - Determination of dissolved oxygen - Opbalone method at the probe (NF ISO 17289 August 2014 / T90-289)"@en ;
+  skos:exactMatch <https://id.eaufrance.fr/met/939> .
+
+:DO rdf:type sosa:Property ;
+	#sosa-oms:relatedObservation :DO_ObsA ;
+	rdfs:label  "Oxygène dissous"@fr;
+	rdfs:label  "Dissolved oxygen"@en;
+  skos:exactMatch <https://id.eaufrance.fr/par/1311> .
+
+
+### Sampling and Samples
+:SpatialSample_Station rdf:type sosa:SpatialSample ; 
+    sosa:hasSampledFeature :Loire_River ;
+    sosa:isResultOf :RawSamplingAct .
+
+:RawSamplingAct rdf:type sosa:Sampling ;
+    sosa:hasUltimateFeatureOfInterest :Loire_River ;
+    sosa:hasFeatureOfInterest :SpatialSample_Station ;
+    sosa:hasResult :RawSampleA ;
+    sosa-oms:parameter "{'depth': 2, 'unit': 'm'}" ;
+	#Note: we don't have oms:parameter, how do we add additional attributes, define our own predicates for depth and UoM?
+    sosa:resultTime "2020-04-17"^^xsd:date .
+
+:RawSampleA rdf:type sosa:MaterialSample ; 
+    sosa:hasSampledFeature :Loire_River ;
+    sosa:isResultOf :RawSamplingAct .
+
+:RawSampleB rdf:type sosa:MaterialSample ; 
+    sosa:hasSampledFeature :Loire_River .
+
+### Observations
+# Note: no way to directly reference the host from the Observation, so doing via virtual sensor and the ObsCaps
+
+:pH_ObsA rdf:type sosa:Observation ;
+    sosa:observedProperty :pH ;
+    sosa:usedProcedure :pH_determination ;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:featureOfInterest :RawSampleA ;
+    sosa:relatedObservation :DO_ObsA ;
+    sosa:resultQuality "preliminary" ;
+    sosa:resultTime "2020-04-17"^^xsd:date ;
+    sosa:phenomenonTime "2020-04-17"^^xsd:date ;
+    sosa:hasSimpleResult "8.1"^^xsd:float ;
+    sosa:sosa:madeBySensor [ a sosa:Sensor ;
+	 sosa:hasDeployment :ObsCappH 	 
+	].
+
+:DO_ObsA rdf:type sosa:Observation ;
+    sosa:observedProperty :DO ;
+    sosa:usedProcedure :DO_determination ;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:featureOfInterest :RawSampleA ;
+    sosa:relatedObservation :pH_ObsA ;
+    sosa:resultQuality "preliminary" ;
+    sosa:resultTime "2020-04-17"^^xsd:date ;
+    sosa:phenomenonTime "2020-04-17"^^xsd:date ;
+    sosa:hasSimpleResult "9.2"^^unit:mg%2FL ;
+    sosa:sosa:madeBySensor [ a sosa:Sensor ;
+	 sosa:hasDeployment :ObsCapDO  
+	].
+
+:pH_ObsB rdf:type sosa:Observation ;
+    sosa:observedProperty :pH ;
+    sosa:usedProcedure :pH_determination ;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:featureOfInterest :RawSampleB ;
+    sosa:relatedObservation :DO_ObsB ;
+    sosa:resultQuality "preliminary" ;
+    sosa:resultTime "2020-06-16"^^xsd:date ;
+    sosa:phenomenonTime "2020-06-16"^^xsd:date ;
+    sosa:hasSimpleResult "7.6"^^xsd:float ;
+    sosa:sosa:madeBySensor [ a sosa:Sensor ;
+	 sosa:hasDeployment :ObsCappH  
+	].
+
+:DO_ObsB rdf:type sosa:Observation ;
+    sosa:observedProperty :DO ;
+    sosa:usedProcedure :DO_determination ;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:featureOfInterest :RawSampleB ;
+    sosa:relatedObservation :pH_ObsB ;
+    sosa:resultQuality "preliminary" ;
+    sosa:resultTime "2020-05-19"^^xsd:date ;
+    sosa:phenomenonTime "2020-05-19"^^xsd:date ;
+    sosa:hasSimpleResult "9.5"^^unit:mg%2FL ;
+    sosa:sosa:madeBySensor [ a sosa:Sensor ;
+	 sosa:hasDeployment :ObsCapDO	 
+	].
+
+### Collections
+
+:pH_ObsCollection rdf:type sosa:ObservationCollection ;
+    sosa:observedProperty :pH ;
+    sosa:usedProcedure :pH_determination ;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:hasMember :pH_ObsA ;
+    sosa:hasMember :pH_ObsB .
+
+:DO_ObsCollection rdf:type sosa:ObservationCollection ;
+    sosa:observedProperty :DO ;
+    sosa:usedProcedure :DO_determination ;
+    sosa:ultimateFeatureOfInterest :Loire_River ;
+    sosa:hasMember :DO_ObsA ;
+    sosa:hasMember :DO_ObsB .
+
+
