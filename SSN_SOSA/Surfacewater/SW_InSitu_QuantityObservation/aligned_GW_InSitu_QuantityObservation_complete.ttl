@@ -1,0 +1,103 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ucum <https://w3id.org/cdt/ucum> .
+
+
+
+
+# Observing Procedure : Flow Measurement by Automated Prob
+<https://data.geoscience.fr/ncl/Proc/xx> rdf:type sosa-oms:ObservingProcedure .
+
+# Observable Property WaterFlow
+<https://data.geoscience.fr/ncl/ObsProp/yy> rdf:type sosa:Property .
+
+# Feature of Interest LOIRE
+<https://data.geoscience.fr/id/hydrogeounit/XXXXX> rdf:type :FeatureOfInterest ;
+    rdfs:label "La Loire" .
+
+# Deployment of sensors
+:RiverFlowDeployment rdf:type sosa:Deployment ;
+    :deploymentTime "1964-01-01"^^xsd:date ;
+    :elevation  "10m" ;
+	#property from hydro ? uknown value
+    sosa:deployedSystem :WaterFlowSensor ;
+	sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+	sosa:deployedOnPlatform <https://www.hydro.eaufrance.fr/stationhydro/K435001010/fiche> .
+
+:OtherSensorDeployment rdf:type sosa:Deployment ;
+    :deploymentTime "1964-01-17"^^xsd:date ;
+    sosa:deployedSystem :OtherSensor ;
+	sosa:deployedOnPlatform <https://www.hydro.eaufrance.fr/stationhydro/K435001010/fiche>;
+	sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+	.
+
+# Sensor (Observer)
+:WaterFlowSensor rdf:type sosa:Sensor ;
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/xx> ;
+    sosa:observes <https://data.geoscience.fr/ncl/ObsProp/yy> ;	
+    sosa:madeObservation :FlowObservationA .
+
+:OtherSensor rdf:type sosa:Sensor .
+
+# Host
+
+<https://www.hydro.eaufrance.fr/stationhydro/K435001010/fiche> rdf:type sosa:Platform ;
+    rdfs:label "BS5001REWW" ;
+    geo:hasGeometry :Location1 .
+
+# Sampling
+:Continuous_SamplingAct  rdf:type sosa:Sampling ;
+    sosa:resultTime "XXXX-XX-XX"^^xsd:date ;
+	sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/XXXXX> ;
+    sosa:hasResult :ContinuousSamplingLocation .
+
+# Spatial Sample
+:ContinuousSamplingLocation rdf:type sosa:Sample ;
+    sosa:relatedObservation :FlowObservationA .
+
+# Observation
+:FlowObservationA rdf:type sosa:Observation ;
+    sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/yy> ; 
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/xx> ;
+	sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/XXXXX> ;
+	sosa-oms:observationType <https://codeListRepo/.../TimeSeries> ;
+	sosa:madeBySensor :WaterFlowSensor ;
+	sosa-oms:madeOnPlatform <https://www.hydro.eaufrance.fr/stationhydro/K435001010/fiche> ;
+    sosa:resultTime "2023-03-07T11:40:00Z"^^xsd:dateTime ;
+    sosa:phenomenonTime "2023-03-07T11:40:00Z"^^xsd:dateTime ;
+	sosa-oms:validTime "2023-03-07T11:40:00Z"^^xsd:dateTime ; 
+    sosa:hasSimpleResult "114.6m^3/s"^^cdt:ucum .
+	
+:FlowObservationB rdf:type sosa:Observation ;
+    sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/yy> ; 
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/xx> ;
+	sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/XXXXX> ;
+	sosa-oms:observationType <https://codeListRepo/.../TimeSeries> ;
+	sosa:madeBySensor :WaterFlowSensor ;
+	sosa-oms:madeOnPlatform <https://www.hydro.eaufrance.fr/stationhydro/K435001010/fiche> ;
+    sosa:resultTime "2023-03-07T12:40:00Z"^^xsd:dateTime ;
+    sosa:phenomenonTime "2023-03-07T12:40:00Z"^^xsd:dateTime ;
+	sosa-oms:validTime "2023-03-07T12:40:00Z"^^xsd:dateTime ; 
+    sosa:hasSimpleResult "115m^3/s"^^cdt:ucum .
+
+# activity
+:EnvironmentalMonitoringActivity a 	prov:Activity;
+	sosa-oms:madeOnPlatform <https://www.hydro.eaufrance.fr/stationhydro/K435001010/fiche> .
+
+
+#obs collection	
+:RiverFlowTimeSeries a sosa:ObservationCollection;
+	sosa:hasMember :FlowObservationA, FlowObservationB  ;
+	sosa:observedProperty <https://data.geoscience.fr/ncl/ObsProp/yy> ; 
+	sosa:usedProcedure <https://data.geoscience.fr/ncl/Proc/xx> ;
+	sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/XXXXX> ;
+	sosa:madeBySensor :WaterFlowSensor ;
+	sosa-oms:madeOnPlatform <https://www.hydro.eaufrance.fr/stationhydro/K435001010/fiche> .
+	
