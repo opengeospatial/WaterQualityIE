@@ -10,7 +10,8 @@
 @prefix ucum <https://w3id.org/cdt/ucum> .
 
 
-
+#TODO Hélène: name the entities with the right URIs
+#TODO Abdel: refine undefined properties and classes
 
 # Observing Procedure : Flow Measurement by Automated Prob
 <https://data.geoscience.fr/ncl/Proc/xx> rdf:type sosa-oms:ObservingProcedure .
