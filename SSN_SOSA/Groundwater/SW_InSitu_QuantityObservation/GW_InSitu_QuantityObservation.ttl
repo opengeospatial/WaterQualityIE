@@ -1,0 +1,112 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix oms: <http://www.w3.org/imagine/oms/>.
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+### Main Features
+<https://data.geoscience.fr/id/hydrogeounit/507AC00> rdf:type sosa:FeatureOfInterest ; 
+    dct:identifier "507AC00" ;
+	rdfs:label " Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes" ;
+	sosa:isFeatureOfInterestOf :InSituQtyObsA ;
+	sosa:isFeatureOfInterestOf :AsObsA ;
+	sosa-oms:relatedSampling :InSitu_Sampling
+	.
+
+# Host and ObsCaps (Deployment)
+:Well_BSS001REWW  rdf:type sosa:Platform ;
+    dct:identifier "BSS001REWT" ;
+	rdfs:label "Piezometre - Ruisseau des Poches (St-Remy - BRGM 01)" ;
+	:altitude =  "223,87 m" ;
+	:referenceElevation :ReferenceElevation1  
+	.
+ReferenceElevation1 rdf:type :Elevation ;
+    :elevation "225"^^xsd:float.
+	
+
+:GroundWaterDepthDeployment  rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt <https://data.geoscience.fr/id/hydrogeounit/507AC00> ; 
+    sosa:deployedOnPlatform :Well_BSS001REWW  ;
+    sosa:deployedSystem :WaterQuantitySensor ;
+    sosa:startTime "1977-10-09"^^xsd:date .
+	
+:WaterQuantitySensor  a sosa:Sensor ;
+	 sosa:forProperty :GroundWaterDepth ;
+	 sosa:usedProcedure :DigitalRecording 	 
+	 .
+:OtherSensorDeployment  rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt <https://data.geoscience.fr/id/hydrogeounit/507AC00> ; 
+    sosa:deployedOnPlatform :Well_BSS001REWW  ;
+    sosa:deployedSystem :OtherSensor .
+:OtherSensor  a sosa:Sensor .
+
+ 
+### Procedures & Observed Properties
+:DigitalRecording rdf:type sosa:ObservingProcedure ;
+  rdfs:label  "Digital recording "@fr;
+  rdfs:label  "Digital recording "@en ;
+  skos:exactMatch <https://id.eaufrance.fr/Proc/34> .
+
+:GroundWaterDepth rdf:type sosa:Property ;
+	rdfs:label  "GroundWaterDepth"@fr;
+	rdfs:label  "GroundWaterDepth"@en ;
+  skos:exactMatch <https://data.geoscience.fr/ncl/ObsProp/186> .
+
+ 
+
+### Sampling and Samples
+
+:InSitu_Sampling rdf:type sosa:Sampling ;
+    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+	sosa:hasSampledFeature :Well_BSS001REWW ;
+	sosa:hasResult :SpatialSample ;
+    sosa:startTime "1977-10-09"^^xsd:date .
+
+:SpatialSample rdf:type sosa:SpatialSample ; 
+    sosa:hasSampledFeature <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:isResultOf :InSitu_Sampling .
+	
+
+### Observations
+
+
+:InSituQtyObsA rdf:type sosa:Observation ;
+    sosa:observedProperty :GroundWaterDepth ;
+    sosa:usedProcedure :DigitalRecording ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:featureOfInterest :SpatialSample ;
+    sosa:resultTime "2023-10-15T00:00:00"^^xsd:date ;
+    sosa:phenomenonTime "2023-10-15T00:00:00"^^xsd:date ;
+	sa-oms:validTime "2023-10-15T00:00:00"^^xsd:date ;
+    sosa:hasSimpleResult "4.8 m"^^cdt:ucum ;
+    sosa:sosa:madeBySensor :WaterQuantitySensor.	
+
+
+
+:IInSituQtyObsB rdf:type sosa:Observation ;
+    sosa:observedProperty :GroundWaterDepth ;
+    sosa:usedProcedure :DigitalRecording ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:featureOfInterest :SpatialSample ;
+    sosa:resultTime "2023-11-19T00:00:00"^^xsd:date ;
+    sosa:phenomenonTime "2023-11-19T00:00:00"^^xsd:date ;
+	sa-oms:validTime "2023-11-19T00:00:00"^^xsd:date ;
+    sosa:hasSimpleResult "4.35 m"^^cdt:ucum ;
+    sosa:sosa:madeBySensor :WaterQuantitySensor.	
+	
+	
+:WaterTempTimeSeries rdf:type sosa:ObservationCollection ;
+     sosa:observedProperty :GroundWaterDepth ;
+    sosa:usedProcedure :DigitalRecording ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+	*sosa:sosa:madeBySensor :WaterQuantitySensor ;
+    sosa:hasMember :InSituQtyObsA ;
+    sosa:hasMember :IInSituQtyObsB .
+
+

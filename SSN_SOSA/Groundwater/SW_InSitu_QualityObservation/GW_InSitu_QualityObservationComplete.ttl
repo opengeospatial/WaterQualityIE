@@ -1,0 +1,112 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix oms: <http://www.w3.org/imagine/oms/>.
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+### Main Features
+<https://data.geoscience.fr/id/hydrogeounit/507AC00> rdf:type sosa:FeatureOfInterest ; 
+    dct:identifier "507AC00" ;
+	rdfs:label " Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes" ;
+	sosa:isFeatureOfInterestOf :InSituObsA ;
+	sosa:isFeatureOfInterestOf :AsObsA ;
+	sosa-oms:relatedSampling :InSitu_Sampling
+	.
+
+# Host and ObsCaps (Deployment)
+:Well_BSS001REWW  rdf:type sosa:Platform ;
+    dct:identifier "BSS001REWT" ;
+	rdfs:label "Piezometre - Ruisseau des Poches (St-Remy - BRGM 01)" ;
+	:altitude =  "223,87 m" ;
+	:referenceElevation :ReferenceElevation1  
+	.
+ReferenceElevation1 rdf:type :Elevation ;
+    :elevation "225"^^xsd:float.
+	
+
+:WaterTemperatureDeployment  rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt <https://data.geoscience.fr/id/hydrogeounit/507AC00> ; 
+    sosa:deployedOnPlatform :Well_BSS001REWW  ;
+    sosa:deployedSystem :WaterTemperatureSensor ;
+    sosa:startTime "1977-10-09"^^xsd:date .
+	
+:WaterTemperatureSensor  a sosa:Sensor ;
+	 sosa:forProperty :WaterTemperature ;
+	 sosa:usedProcedure :DigitalRecording 	 
+	 .
+:OtherSensorDeployment  rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt <https://data.geoscience.fr/id/hydrogeounit/507AC00> ; 
+    sosa:deployedOnPlatform :Well_BSS001REWW  ;
+    sosa:deployedSystem :OtherSensor .
+:OtherSensor  a sosa:Sensor .
+
+ 
+### Procedures & Observed Properties
+:DigitalRecording rdf:type sosa:ObservingProcedure ;
+  rdfs:label  "Digital recording "@fr;
+  rdfs:label  "Digital recording "@en ;
+  skos:exactMatch <https://id.eaufrance.fr/Proc/34> .
+
+:WaterTemperature rdf:type sosa:Property ;
+	rdfs:label  "WaterTemperature"@fr;
+	rdfs:label  "WaterTemperature"@en ;
+  skos:exactMatch <https://data.geoscience.fr/ncl/ObsProp/187> .
+
+ 
+
+### Sampling and Samples
+
+:InSitu_Sampling rdf:type sosa:Sampling ;
+    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+	sosa:hasSampledFeature :Well_BSS001REWW ;
+	sosa:hasResult :SpatialSample ;
+    sosa:startTime "1977-10-09"^^xsd:date .
+
+:SpatialSample rdf:type sosa:SpatialSample ; 
+    sosa:hasSampledFeature <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:isResultOf :InSitu_Sampling .
+	
+
+### Observations
+
+
+:InSituObsA rdf:type sosa:Observation ;
+    sosa:observedProperty :WaterTemperature ;
+    sosa:usedProcedure :DigitalRecording ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:featureOfInterest :SpatialSample ;
+    sosa:resultTime "2023-02-28T14:53:00"^^xsd:date ;
+    sosa:phenomenonTime "2023-02-28T14:53:00"^^xsd:date ;
+	sa-oms:validTime "2023-02-28T14:53:00"^^xsd:date ;
+    sosa:hasSimpleResult "8.2 °C"^^cdt:ucum ;
+    sosa:sosa:madeBySensor :WaterTemperatureSensor.	
+
+
+
+:InSituTempObsB rdf:type sosa:Observation ;
+    sosa:observedProperty :WaterTemperature ;
+    sosa:usedProcedure :DigitalRecording ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:featureOfInterest :SpatialSample ;
+    sosa:resultTime "2023-01-10T15:37:00"^^xsd:date ;
+    sosa:phenomenonTime "2023-01-10T15:37:00"^^xsd:date ;
+	sa-oms:validTime "2023-01-10T15:37:00"^^xsd:date ;
+    sosa:hasSimpleResult "8.3 °C"^^cdt:ucum ;
+    sosa:sosa:madeBySensor :WaterTemperatureSensor.	
+	
+	
+:WaterTempTimeSeries rdf:type sosa:ObservationCollection ;
+     sosa:observedProperty :WaterTemperature ;
+    sosa:usedProcedure :DigitalRecording ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+	*sosa:sosa:madeBySensor :WaterTemperatureSensor ;
+    sosa:hasMember :InSituObsA ;
+    sosa:hasMember :InSituTempObsB .
+
+
