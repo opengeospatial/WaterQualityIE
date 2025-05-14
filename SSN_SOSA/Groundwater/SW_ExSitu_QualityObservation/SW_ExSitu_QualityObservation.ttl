@@ -1,0 +1,122 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
+@prefix oms: <http://www.w3.org/imagine/oms/>.
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+### Main Features
+<https://data.geoscience.fr/id/hydrogeounit/507AC00> rdf:type sosa:FeatureOfInterest ; 
+    dct:identifier "507AC00" ;
+	rdfs:label " Complément de l'entité NV2 : Formations plio-quaternaires de la Dombes" ;
+	sosa:isFeatureOfInterestOf :NitrateObsA ;
+	sosa:isFeatureOfInterestOf :AsObsA ;
+	sosa-oms:relatedSampling :RawSamplingAct
+	.
+
+# Host and ObsCaps (Deployment)
+:Well_BSS001REWT rdf:type sosa:Platform ;
+    dct:identifier "BSS001REWT" .
+
+:ObsCapAs rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt <https://data.geoscience.fr/id/hydrogeounit/507AC00> ; 
+    #sosa:deployedOnPlatform :Well_BSS001REWT ;
+    sosa:deployedSystem _:sensorAs.
+	
+_:sensorAs a sosa:Sensor ;
+	 sosa:forProperty :as ;
+	 sosa:usedProcedure :ArsenicObservingProcedure 	 
+	 .
+
+:ObsCapNitrate rdf:type sosa:Deployment ;
+    sosa:hasUltimateFeatureOfInterestt <https://data.geoscience.fr/id/hydrogeounit/507AC00> ; 
+    #sosa:deployedOnPlatform :Well_BSS001REWT ;
+    sosa:deployedSystem _:sensorNO3.
+
+_:sensorNO3	a sosa:Sensor ;
+	sosa:forProperty :no3 ;
+	sosa:usedProcedure :NitrateObservingProcedure 	
+	 .
+ 
+### Procedures & Observed Properties
+:ArsenicObservingProcedure rdf:type sosa:ObservingProcedure ;
+  rdfs:label  "Arsenic Observing Procedure "@fr;
+  rdfs:label  "Arsenic Observing Procedure "@en ;
+  skos:exactMatch <https://id.eaufrance.fr/met/xxx> .
+
+:as rdf:type sosa:Property ;
+	rdfs:label  "Arsenic"@fr;
+	rdfs:label  "Arsenic"@en ;
+  skos:exactMatch <http://id.eaufrance.fr/par/1369> .
+
+
+:NitrateObservingProcedure rdf:type sosa:ObservingProcedure ;
+	rdfs:label  "Nitrate Observing Procedure "@fr;
+  rdfs:label  "Nitrate Observing Procedure "@en ;
+  skos:exactMatch <https://id.eaufrance.fr/met/yyy> .
+
+:no3 rdf:type sosa:Property ;
+	rdfs:label  "Nitrate"@fr;
+	rdfs:label  "Nitrate"@en;
+  skos:exactMatch <https://id.eaufrance.fr/par/1340> .
+  
+:AcidStablization a sosa-oms:PreparationProcedure ;
+	rdfs:label  "Acid Stablization "@fr;
+  rdfs:label  "Acid Stablization "@en ;
+  skos:exactMatch <https://id.eaufrance.fr/met/zzz> ;
+	sosa-oms:samplePreparationStep :AsPrepStep
+	.
+
+### Sampling and Samples
+
+:RawSamplingAct rdf:type sosa:Sampling ;
+    sosa:hasUltimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:hasResult :RawSample ;
+    oms:parameter "{'depth': 14, 'unit': 'm'}" ;
+	#Note: we don't have oms:parameter, how do we add additional attributes, define our own predicates for depth and UoM?
+    sosa:resultTime "2011-11-14"^^xsd:date .
+
+:RawSample rdf:type sosa:MaterialSample ; 
+    sosa:hasSampledFeature <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:isResultOf :RawSamplingAct .
+
+:AsSubsampling  a sosa:Sampling ;
+    sosa:hasSampledFeature :RawSample  ;
+	sosa:hasResult :AsSample  ;
+	
+:AsSample  rdf:type sosa:MaterialSample ; 
+    sosa-oms:hasPreparationStep :AsPrepStep  .
+
+:AsPrepStep a sosa-oms:PreparationStep ;
+	
+
+### Observations
+
+:NitrateObsA rdf:type sosa:Observation ;
+    sosa:observedProperty :no3 ;
+    sosa:usedProcedure :NitrateObservingProcedure ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:featureOfInterest :RawSample ;
+    sosa:resultQuality "validated" ;
+    sosa:resultTime "2011-11-16"^^xsd:date ;
+    sosa:phenomenonTime "2011-11-14"^^xsd:date ;
+    sosa:hasSimpleResult " 22.2 mg/L"^^cdt:ucum ;
+    sosa:sosa:madeBySensor _:sensorNO3.
+
+:AsObsA  rdf:type sosa:Observation ;
+    sosa:observedProperty :as ;
+    sosa:usedProcedure :ArsenicObservingProcedure ;
+    sosa:ultimateFeatureOfInterest <https://data.geoscience.fr/id/hydrogeounit/507AC00> ;
+    sosa:featureOfInterest :AsSample  ;
+    sosa:resultQuality "validated" ;
+    sosa:resultTime "2011-11-15"^^xsd:date ;
+    sosa:phenomenonTime "2011-11-14"^^xsd:date ;
+    sosa:hasSimpleResult "2 µg/L"^^cdt:ucum	t ;
+    sosa:sosa:madeBySensor _:sensorAs.
+
+
