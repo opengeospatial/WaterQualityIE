@@ -6,6 +6,8 @@
 @prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/>.
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/>.
 @prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unit: <https://qudt.org/vocab/unit/> .
 
 ### Main Features
 :Loire_River rdf:type sosa:FeatureOfInterest ; 
@@ -25,7 +27,7 @@
     sosa:deployedOnPlatform :LOIRE_A_JARGEAU_WQ_Station ;
     sosa:deployedSystem [ a sosa:Sensor ;
 	 sosa:forProperty :pH ;
-	 sosa:usedProcedure :pH_determination .	 
+	 sosa:usedProcedure :pH_determination	 
 	] .
 
 :ObsCapDO rdf:type sosa:Deployment ;
@@ -34,31 +36,31 @@
     sosa:deployedOnPlatform :LOIRE_A_JARGEAU_WQ_Station ;
     sosa:deployedSystem [ a sosa:Sensor ;
 	 sosa:forProperty :DO ;
-	 sosa:usedProcedure :DO_determination .	 
+	 sosa:usedProcedure :DO_determination	 
 	] .
  
 ### Procedures & Observed Properties
 :pH_determination rdf:type sosa:ObservingProcedure ;
-	#oms:relatedObservation :pH_ObsA ;
+	#sosa-oms:relatedObservation :pH_ObsA ;
 	rdfs:label  "Qualité de l'eau - Détermination du pH (NF EN ISO 10523 Mai 2012 / T90-418)"@fr;
   rdfs:label  "Water quality - Determination of pH (NF EN ISO 10523 May 2012 / T90-418)"@en ;
   skos:exactMatch <https://id.eaufrance.fr/met/814> .
 
 :pH rdf:type sosa:Property ;
-	#oms:relatedObservation :pH_ObsA ;
+	#sosa-oms:relatedObservation :pH_ObsA ;
 	rdfs:label  "Potentiel en Hydrogène (pH)"@fr;
 	rdfs:label  "Potential of hydrogen (pH)"@en;
   skos:exactMatch <https://id.eaufrance.fr/par/1302> .
 
 
 :DO_determination rdf:type sosa:ObservingProcedure ;
-	#oms:relatedObservation :DO_ObsA ;
+	#sosa-oms:relatedObservation :DO_ObsA ;
 	rdfs:label  "Qualité de l'eau - Dosage de l'oxygène dissous - Méthode optique à la sonde (NF ISO 17289 Août 2014 / T90-289) "@fr;
   rdfs:label  "Water quality - Determination of dissolved oxygen - Opbalone method at the probe (NF ISO 17289 August 2014 / T90-289)"@en ;
   skos:exactMatch <https://id.eaufrance.fr/met/939> .
 
 :DO rdf:type sosa:Property ;
-	#oms:relatedObservation :DO_ObsA ;
+	#sosa-oms:relatedObservation :DO_ObsA ;
 	rdfs:label  "Oxygène dissous"@fr;
 	rdfs:label  "Dissolved oxygen"@en;
   skos:exactMatch <https://id.eaufrance.fr/par/1311> .
@@ -73,7 +75,7 @@
     sosa:hasUltimateFeatureOfInterest :Loire_River ;
     sosa:hasFeatureOfInterest :SpatialSample_Station ;
     sosa:hasResult :RawSampleA ;
-    oms:parameter "{'depth': 2, 'unit': 'm'}" ;
+    sosa-oms:parameter "{'depth': 2, 'unit': 'm'}" ;
 	#Note: we don't have oms:parameter, how do we add additional attributes, define our own predicates for depth and UoM?
     sosa:resultTime "2020-04-17"^^xsd:date .
 
@@ -96,9 +98,9 @@
     sosa:resultQuality "preliminary" ;
     sosa:resultTime "2020-04-17"^^xsd:date ;
     sosa:phenomenonTime "2020-04-17"^^xsd:date ;
-    sosa:hasSimpleResult "8.1"^^xsd:float .
+    sosa:hasSimpleResult "8.1"^^xsd:float ;
     sosa:sosa:madeBySensor [ a sosa:Sensor ;
-	 sosa:hasDeployment :ObsCappH .	 
+	 sosa:hasDeployment :ObsCappH 	 
 	].
 
 :DO_ObsA rdf:type sosa:Observation ;
@@ -110,9 +112,9 @@
     sosa:resultQuality "preliminary" ;
     sosa:resultTime "2020-04-17"^^xsd:date ;
     sosa:phenomenonTime "2020-04-17"^^xsd:date ;
-    sosa:hasSimpleResult "9.2"^^unit:mg(O2)/L ;
+    sosa:hasSimpleResult "9.2"^^unit:mg%2FL ;
     sosa:sosa:madeBySensor [ a sosa:Sensor ;
-	 sosa:hasDeployment :ObsCapDO .	 
+	 sosa:hasDeployment :ObsCapDO  
 	].
 
 :pH_ObsB rdf:type sosa:Observation ;
@@ -124,9 +126,9 @@
     sosa:resultQuality "preliminary" ;
     sosa:resultTime "2020-06-16"^^xsd:date ;
     sosa:phenomenonTime "2020-06-16"^^xsd:date ;
-    sosa:hasSimpleResult "7.6"^^xsd:float .
+    sosa:hasSimpleResult "7.6"^^xsd:float ;
     sosa:sosa:madeBySensor [ a sosa:Sensor ;
-	 sosa:hasDeployment :ObsCappH .	 
+	 sosa:hasDeployment :ObsCappH  
 	].
 
 :DO_ObsB rdf:type sosa:Observation ;
@@ -138,9 +140,9 @@
     sosa:resultQuality "preliminary" ;
     sosa:resultTime "2020-05-19"^^xsd:date ;
     sosa:phenomenonTime "2020-05-19"^^xsd:date ;
-    sosa:hasSimpleResult "9.5"^^unit:mg(O2)/L ;
+    sosa:hasSimpleResult "9.5"^^unit:mg%2FL ;
     sosa:sosa:madeBySensor [ a sosa:Sensor ;
-	 sosa:hasDeployment :ObsCapDO .	 
+	 sosa:hasDeployment :ObsCapDO	 
 	].
 
 ### Collections
@@ -158,5 +160,3 @@
     sosa:ultimateFeatureOfInterest :Loire_River ;
     sosa:hasMember :DO_ObsA ;
     sosa:hasMember :DO_ObsB .
-
-
